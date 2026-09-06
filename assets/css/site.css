@@ -836,3 +836,16 @@ button, [role="button"], a.btn { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 2px solid var(--river); outline-offset: 2px; border-radius: 4px; }
 .btn:focus-visible { outline-offset: 3px; }
 .cal__day:focus-visible { outline-offset: 0; }
+
+/* icons v2: duotone, larger where they carry meaning */
+.factlist .icon { width: 2rem; height: 2rem; }
+.article__body h2 .icon { width: 1.75rem; height: 1.75rem; }
+.step .icon { width: 2.25rem; height: 2.25rem; color: var(--river); margin-bottom: var(--sp-3); }
+.faq-teaser .icon { width: 1.75rem; height: 1.75rem; color: var(--river); }
+.hero__facts .icon { width: 1.25rem; height: 1.25rem; }
+.route .icon { width: 2.25rem; height: 2.25rem; }
+.rtabs button .icon { width: 1.35em; height: 1.35em; }
+.contact-list .icon { width: 1.75rem; height: 1.75rem; }
+.empty-state .icon { width: 3rem; height: 3rem; color: var(--river); }
+.status .icon { width: 2rem; height: 2rem; }
+.summary .icon { width: 1.75rem; height: 1.75rem; color: var(--river); margin-bottom: var(--sp-2); }
