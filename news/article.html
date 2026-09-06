@@ -9,9 +9,9 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css">
-<link rel="stylesheet" href="../assets/css/tokens.css">
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=10">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=10">
+<link rel="stylesheet" href="../assets/css/site.css?v=10">
 </head>
 <body data-root="../" data-page="news">
 <main>
@@ -25,8 +25,22 @@
     <p class="draft">Абзац новости</p>
   </div>
   <div class="pager"><a href="#">← Предыдущая новость</a><a href="#">Следующая новость →</a></div>
+
+  <section class="comments" id="comments">
+    <h2 style="font-size: var(--t-xl)">Обсуждение <span class="muted" style="font-weight:400">· 3</span></h2>
+    <ul class="comment-list">
+      <li class="comment"><span class="avatar">А</span><div><div class="comment__head"><b class="draft">Имя</b><span class="small">волонтёр сезона <span class="draft">ГГГГ</span> · <span class="draft">дата</span></span></div><p class="draft">Текст комментария</p><a class="small" href="#">Ответить</a></div></li>
+      <li class="comment comment--reply"><span class="avatar avatar--river">С</span><div><div class="comment__head"><b>Лисицын С. Н.</b><span class="chip chip--river">руководитель</span><span class="small draft">дата</span></div><p class="draft">Ответ руководителя</p></div></li>
+      <li class="comment"><span class="avatar">М</span><div><div class="comment__head"><b class="draft">Имя</b><span class="small draft">дата</span></div><p class="draft">Текст комментария</p><a class="small" href="#">Ответить</a></div></li>
+    </ul>
+    <form class="comment-form" onsubmit="return false">
+      <label for="c-new" class="small">Написать могут волонтёры с аккаунтом</label>
+      <textarea id="c-new" placeholder="Ваш комментарий"></textarea>
+      <div class="row row--between"><span class="small">Без телефонов и чужих фамилий. Руководитель может скрыть комментарий.</span><button class="btn btn--primary btn--sm" type="submit">Отправить</button></div>
+    </form>
+  </section>
 </div></div></section>
 </main>
-<script src="../assets/js/chrome.js"></script>
+<script src="../assets/js/chrome.js?v=10"></script>
 </body>
 </html>

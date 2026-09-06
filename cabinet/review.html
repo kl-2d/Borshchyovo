@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Отзыв о сезоне — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=10">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=10">
+<link rel="stylesheet" href="../assets/css/site.css?v=10">
+</head>
+<body data-root="../" data-page="cabinet" data-user="Имя">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Кабинет</h1><nav class="tabs" aria-label="Кабинет">
+<a href="arrival.html"><svg class="icon"><use href="#i-calendar"/></svg>Мой заезд</a>
+<a href="profile.html"><svg class="icon"><use href="#i-users"/></svg>Карточка</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">2</span></a>
+<a href="review.html" aria-current="page"><svg class="icon"><use href="#i-star"/></svg>Отзыв</a>
+</nav></div></div>
+<div class="app"><div class="wrap wrap--narrow">
+  <div class="two">
+    <form class="panel" onsubmit="return false">
+      <h2>Ваш отзыв о сезоне ГГГГ</h2>
+      <p class="muted" style="margin-bottom: var(--sp-5)">Отзыв увидят будущие волонтёры на сайте после проверки руководителем. Пишите честно: и про хорошее, и про трудное.</p>
+      <div class="field"><label>Оценка</label>
+        <div class="stars-in" role="radiogroup" aria-label="Оценка от 1 до 5">
+          <input type="radio" name="r" id="r5" value="5"><label for="r5" title="5"><svg class="icon"><use href="#i-star"/></svg></label>
+          <input type="radio" name="r" id="r4" value="4" checked><label for="r4" title="4"><svg class="icon"><use href="#i-star"/></svg></label>
+          <input type="radio" name="r" id="r3" value="3"><label for="r3" title="3"><svg class="icon"><use href="#i-star"/></svg></label>
+          <input type="radio" name="r" id="r2" value="2"><label for="r2" title="2"><svg class="icon"><use href="#i-star"/></svg></label>
+          <input type="radio" name="r" id="r1" value="1"><label for="r1" title="1"><svg class="icon"><use href="#i-star"/></svg></label>
+        </div>
+      </div>
+      <div class="field"><label for="rv-t">Что понравилось, что было трудно</label><textarea id="rv-t" style="min-height: 9em" placeholder="Два-три абзаца"></textarea><span class="hint">Без телефонов и фамилий других людей</span></div>
+      <div class="field"><label class="check"><input type="checkbox" checked> Показывать моё имя и город</label></div>
+      <div class="field"><label class="check"><input type="checkbox" checked> Разрешаю опубликовать отзыв на сайте</label></div>
+      <div class="form-foot"><span class="small">Заезд: Борщёво-5 · <span class="draft">дд.мм — дд.мм</span></span><button class="btn btn--primary" type="submit">Отправить отзыв</button></div>
+    </form>
+    <aside>
+      <div class="panel">
+        <h3>Ваш прошлый отзыв</h3>
+        <div class="review-card is-pending" style="padding: var(--sp-4)">
+          <div class="rating"><span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span></div>
+          <p class="text draft">Текст отзыва за прошлый сезон</p>
+          <div class="meta"><span>Сезон <span class="draft">ГГГГ</span></span><span class="chip chip--ok">опубликован</span></div>
+        </div>
+        <p class="small" style="margin-top: var(--sp-3)">Отзыв можно изменить или скрыть в любой момент.</p>
+      </div>
+    </aside>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js?v=10"></script>
+</body>
+</html>

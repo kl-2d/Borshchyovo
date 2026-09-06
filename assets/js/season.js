@@ -178,14 +178,47 @@
         const staying = st.inCamp.filter(q => !same(q.from, open) && !same(q.to, open));
         if (staying.length) h += `<h4>В лагере</h4><ul>${staying.map(q => person(q, false)).join('')}</ul>`;
         if (!n) h += `<p class="empty">Пока никого — хорошее время приехать.</p>`;
-        if (mode === 'admin') h += `<div class="pick"><a class="btn btn--secondary btn--sm" href="#add-event">Событие в этот день</a><a class="btn btn--secondary btn--sm" href="daylist.html">Список на день</a></div>`;
+        if (mode === 'admin') h += `<div class="pick"><button type="button" class="btn btn--primary btn--sm" data-add-event>Событие в этот день</button><a class="btn btn--secondary btn--sm" href="daylist.html">Список на день</a></div><div class="evform" hidden></div>`;
         else h += (sel.from && sel.to) ? pickedBlock() + pickControls() : pickControls();
       }
       panel.innerHTML = `<button type="button" class="close" aria-label="Закрыть"><svg class="icon"><use href="#i-x"/></svg></button>` + h + ((sel.from && sel.to) ? '' : pickedBlock());
       panel.querySelector('.close').addEventListener('click', closeDay);
+      panel.querySelector('[data-add-event]')?.addEventListener('click', () => openEventForm(open));
       panel.querySelectorAll('[data-pick]').forEach(b => b.addEventListener('click', () => pick(b.dataset.pick, open)));
       panel.querySelector('#pick-clear')?.addEventListener('click', () => { sel.from = sel.to = null; paint(); preview(null); renderPanel(); });
     };
+    // Admin: inline event form for the open day. Saving adds to the dataset and re-renders everything.
+    function openEventForm(x) {
+      const box = panel.querySelector('.evform'); if (!box) return;
+      const iso = d => `${Y}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+      box.hidden = false;
+      box.innerHTML = `<form class="evform__f">
+        <div class="field"><label>Тип</label><div class="radios radios--kinds">
+          <label class="kind-holiday"><input type="radio" name="k" value="holiday" checked>${kicon('holiday')}Праздник</label>
+          <label class="kind-edu"><input type="radio" name="k" value="edu">${kicon('edu')}Лекция, экскурсия</label>
+          <label class="kind-guests"><input type="radio" name="k" value="guests">${kicon('guests')}Гости, группы</label>
+          <label class="kind-work"><input type="radio" name="k" value="work">${kicon('work')}Работы лагеря</label>
+        </div></div>
+        <div class="field"><label for="ev-t">Название</label><input class="input" id="ev-t" name="title" placeholder="День археолога" required></div>
+        <div class="field"><label>Когда</label><div class="dates"><input class="input" type="date" name="from" value="${iso(x)}" aria-label="Начало"><input class="input" type="date" name="to" value="${iso(x)}" aria-label="Конец"></div></div>
+        <div class="field"><label>Время</label><div class="dates dates--time"><input class="input" type="time" name="t1" aria-label="Начало"><span class="muted">—</span><input class="input" type="time" name="t2" aria-label="Конец"></div><span class="hint">Необязательно</span></div>
+        <div class="field"><label for="ev-n">Пояснение</label><input class="input" id="ev-n" name="note" placeholder="Видно всем на сайте"></div>
+        <label class="check"><input type="checkbox" name="pub" checked> Показывать волонтёрам</label>
+        <div class="form-foot" style="margin-top: var(--sp-3); padding-top: var(--sp-3)"><button type="button" class="link-more" data-ev-cancel style="background:none;border:0;padding:0;cursor:pointer">Отмена</button><button class="btn btn--primary btn--sm" type="submit">Добавить в календарь</button></div>
+      </form>`;
+      box.querySelector('[data-ev-cancel]').addEventListener('click', () => { box.hidden = true; box.innerHTML = ''; });
+      box.querySelector('form').addEventListener('submit', e => {
+        e.preventDefault();
+        const f = new FormData(e.target);
+        const from = new Date(f.get('from') + 'T00:00:00'), to = new Date((f.get('to') || f.get('from')) + 'T00:00:00');
+        const time = f.get('t1') ? `${f.get('t1')}${f.get('t2') ? '–' + f.get('t2') : ''}` : '';
+        SEASON.events.push({ from, to: to < from ? from : to, title: f.get('title'), note: [time, f.get('note')].filter(Boolean).join(' · '), kind: f.get('k'), isPublic: !!f.get('pub') });
+        SEASON.events.sort((a, b) => a.from - b.from);
+        build(); renderPanel();
+        const ev = document.getElementById('events'); if (ev) renderEvents(ev);
+      });
+      box.querySelector('#ev-t').focus();
+    }
     // One clear next action per state: arrive → depart → apply.
     function pickControls() {
       if (!sel.from || sel.to) {

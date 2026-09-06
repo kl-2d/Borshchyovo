@@ -9,9 +9,9 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css">
-<link rel="stylesheet" href="../assets/css/tokens.css">
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=10">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=10">
+<link rel="stylesheet" href="../assets/css/site.css?v=10">
 </head>
 <body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
 <main>
@@ -20,6 +20,7 @@
 <a href="calendar.html"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
 <a href="volunteers.html"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
 <a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="reviews.html"><svg class="icon"><use href="#i-star"/></svg>Отзывы <span class="badge">2</span></a>
 <a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
 <a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
 <a href="settings.html" aria-current="page"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
@@ -31,14 +32,13 @@
       <div class="form-grid">
         <div class="field"><label>Начало сезона</label><input class="input" type="date" value="2026-06-15"><span class="hint">Обычно середина июня</span></div>
         <div class="field"><label>Конец сезона</label><input class="input" type="date" value="2026-09-15"><span class="hint">Обычно середина сентября</span></div>
-        <div class="field"><label for="cap">Лагерь вмещает</label><input class="input" id="cap" type="number" value="12"><span class="hint">Человек одновременно — от этого считается «полно» в календаре</span></div>
+        <div class="field"><label for="cap">Лагерь вмещает</label><input class="input" id="cap" type="number" value="12"><span class="hint">Человек одновременно</span></div>
+        <div class="field"><label for="dayoff">Выходной день</label><select id="dayoff"><option>Воскресенье</option><option>Суббота</option><option>Нет</option></select><span class="hint">Отмечается в календаре</span></div>
         <div class="field"><label for="mind">Минимум дней</label><input class="input" id="mind" type="number" value="7"></div>
+        <div class="field"><label for="maxd">Максимум дней</label><input class="input" id="maxd" type="number" value="40"></div>
         <div class="field field--full"><label class="check"><input type="checkbox" checked> Набор открыт (кнопка «Записаться» на сайте)</label></div>
       </div>
-      <div class="field"><label for="maxd">Максимум дней</label><input class="input" id="maxd" type="number" value="40"></div>
-      <div class="field"><label for="dayoff">Выходной день</label><select id="dayoff"><option>Воскресенье</option><option>Суббота</option><option>Нет</option></select><span class="hint">Отмечается в календаре на всех неделях сезона</span></div>
-      <button class="btn btn--primary" type="button">Сохранить сезон</button>
-      <p class="small" style="margin-top: var(--sp-3)">Даты и вместимость сразу меняют календарь на сайте. События сезона добавляются в <a href="calendar.html">календаре</a>.</p>
+      <div class="form-foot"><span class="small">Даты и вместимость сразу меняют календарь. События — в <a href="calendar.html">календаре</a>.</span><button class="btn btn--primary" type="button">Сохранить сезон</button></div>
     </div>
     <div>
       <div class="panel">
@@ -60,6 +60,6 @@
   </div>
 </div></div>
 </main>
-<script src="../assets/js/chrome.js"></script>
+<script src="../assets/js/chrome.js?v=10"></script>
 </body>
 </html>

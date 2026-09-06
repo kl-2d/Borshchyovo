@@ -9,53 +9,47 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css">
-<link rel="stylesheet" href="../assets/css/tokens.css">
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=10">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=10">
+<link rel="stylesheet" href="../assets/css/site.css?v=10">
 </head>
 <body data-root="../" data-page="sites">
 <main>
-  <section class="hero" style="min-height: clamp(22rem, 56vh, 34rem)">
-    <div class="photo"><span class="photo__cap">Фото стоянки: раскоп с высоты</span></div>
-    <div class="wrap"><div class="hero__inner">
-      <span class="hero__kicker"><svg class="icon"><use href="#i-check"/></svg>Копаем в этом сезоне</span>
-      <h1>Борщёво-5</h1>
-      <p class="lede draft">Одна строка: что это за памятник</p>
-    </div></div>
-  </section>
-  <section class="section section--tight"><div class="wrap">
-    <div class="crumbs"><a href="../">Главная</a> / <a href="./">Стоянки</a> / Борщёво-5</div>
-    <div class="split split--text-first" style="align-items:start">
-      <div>
-        <dl class="site-facts">
-          <div><dt>Эпоха</dt><dd class="draft">эпоха</dd></div>
-          <div><dt>Возраст слоя</dt><dd class="draft">тыс. лет</dd></div>
-          <div><dt>Открыта</dt><dd class="draft">год</dd></div>
-          <div><dt>Что найдено</dt><dd class="draft">кратко</dd></div>
-        </dl>
-        <div class="prose">
-          <h2>О памятнике</h2>
-          <p class="draft">Абзац: история открытия и исследования</p>
-          <p class="draft">Абзац: чем стоянка важна для науки</p>
-          <h2 style="margin-top: var(--sp-6)">Что делаем в этом сезоне</h2>
-          <p class="draft">Абзац: задачи сезона, какие работы достаются волонтёрам</p>
-        </div>
+  <div class="wrap event event--top">
+    <div class="photo event__photo photo--tall"><span class="photo__cap">Фото стоянки: раскоп с людьми</span></div>
+    <aside>
+      <div class="ecard">
+        <div class="kicker row" style="gap: var(--sp-2)">Стоянка <span class="chip chip--ok"><svg class="icon"><use href="#i-check"/></svg>Копаем в этом сезоне</span></div>
+        <h1>Борщёво-5</h1>
+        <ul class="meta">
+          <li><svg class="icon"><use href="#i-hills"/></svg><div><b class="draft">Эпоха</b><span>возраст слоя <span class="draft">тыс. лет</span></span></div></li>
+          <li><svg class="icon"><use href="#i-flag"/></svg><div><b>Открыта в <span class="draft">году</span></b><span class="draft">кем и при каких обстоятельствах</span></div></li>
+          <li><svg class="icon"><use href="#i-bone"/></svg><div><b>Что найдено</b><span class="draft">кратко, две-три позиции</span></div></li>
+          <li><svg class="icon"><use href="#i-pin"/></svg><div><b>Где</b><span>Борщёво на Дону · <a href="#map">на карте</a></span></div></li>
+        </ul>
+        <a class="btn btn--primary btn--block btn--lg" href="../apply/login.html">Записаться на эту стоянку</a>
+        <a class="btn btn--secondary btn--block" href="../season/">Календарь сезона</a>
+        <p class="foot">В заявке стоянка будет выбрана заранее.</p>
       </div>
-      <div>
-        <div class="panel" style="margin-bottom: var(--sp-4)">
-          <h3>Записаться на эту стоянку</h3>
-          <p class="small" style="margin-bottom: var(--sp-3)">Сезон <span data-season-fact="range"></span>. В форме стоянка будет выбрана заранее.</p>
-          <a class="btn btn--primary btn--block" href="../apply/step3.html">Записаться</a>
-          <a class="link-more" href="../season/" style="display:block; margin-top: var(--sp-3)">Кто уже едет</a>
-        </div>
-        <div class="map" style="aspect-ratio: 4/3" role="img" aria-label="Карта: стоянка и лагерь">
-          <svg class="map__river" viewBox="0 0 840 360" preserveAspectRatio="none" aria-hidden="true"><path d="M0 250 C120 230 180 300 300 270 S480 180 600 210 760 260 840 220" fill="none" stroke="#9fb9c6" stroke-width="18" stroke-linecap="round"/></svg>
-          <span class="map__pin"><svg class="icon"><use href="#i-pin"/></svg></span>
-          <span class="photo__cap">Стоянка и лагерь на карте</span>
-        </div>
-      </div>
+    </aside>
+  </div>
+
+  <section class="section section--tight"><div class="wrap split split--text-first" style="align-items:start">
+    <div class="prose">
+      <h2>О памятнике</h2>
+      <p class="draft">Абзац: история открытия и исследования</p>
+      <p class="draft">Абзац: чем стоянка важна для науки</p>
+      <h2 style="margin-top: var(--sp-6)">Что делаем в этом сезоне</h2>
+      <p class="draft">Абзац: задачи сезона, какие работы достаются волонтёрам</p>
+    </div>
+    <div class="map" id="map" style="aspect-ratio: 4/3" role="img" aria-label="Карта: стоянка и лагерь">
+      <svg class="map__river" viewBox="0 0 840 360" preserveAspectRatio="none" aria-hidden="true"><path d="M0 250 C120 230 180 300 300 270 S480 180 600 210 760 260 840 220" fill="none" stroke="#9fb9c6" stroke-width="18" stroke-linecap="round"/></svg>
+      <span class="map__pin" style="left:44%;top:46%"><svg class="icon"><use href="#i-pin"/></svg><span class="lbl">Борщёво-5</span></span>
+      <span class="map__pin is-muted" style="left:30%;top:70%"><svg class="icon"><use href="#i-tent"/></svg><span class="lbl">Лагерь</span></span>
+      <span class="photo__cap">Стоянка и лагерь на карте</span>
     </div>
   </div></section>
+
   <section class="section section--ground section--tight"><div class="wrap">
     <div class="section__head row row--between" style="max-width:none"><h2 style="margin:0">Находки</h2><a class="link-more" href="../gallery/">Вся галерея</a></div>
     <div class="cols-4">
@@ -65,9 +59,20 @@
       <div class="photo photo--square"><span class="photo__cap">Находка</span></div>
     </div>
   </div></section>
+
+  <section class="section section--tight"><div class="wrap">
+    <div class="section__head row row--between" style="max-width:none"><h2 style="margin:0">Другие стоянки</h2><a class="link-more" href="./">Все стоянки</a></div>
+    <div class="cards">
+      <a class="card" href="#"><div class="photo"><span class="photo__cap">Фото стоянки</span></div><h3>Костёнки-21</h3><div class="card__meta draft">Эпоха · что копаем</div></a>
+      <a class="card" href="#"><div class="photo"><span class="photo__cap">Фото стоянки</span></div><h3 class="draft">Название стоянки</h3><div class="card__meta draft">Эпоха · не копаем в этом сезоне</div></a>
+    </div>
+  </div></section>
 </main>
-<script src="../assets/js/chrome.js"></script>
-<script src="../assets/js/season.js"></script>
-<script>Season.render({});</script>
+<script src="../assets/js/chrome.js?v=10"></script>
+<script src="../assets/js/season.js?v=10"></script>
+<script>
+Season.render({});
+(function () { const photo = document.querySelector('.event__photo'), card = document.querySelector('.ecard'); if (!photo || !card || !('ResizeObserver' in window)) return; const sync = () => { const wide = matchMedia('(min-width: 60rem)').matches; photo.style.height = wide ? card.offsetHeight + 'px' : ''; photo.style.aspectRatio = wide ? 'auto' : ''; }; new ResizeObserver(sync).observe(card); addEventListener('resize', sync); sync(); })();
+</script>
 </body>
 </html>

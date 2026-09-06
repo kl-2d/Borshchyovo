@@ -14,41 +14,49 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="assets/css/fonts.css">
-<link rel="stylesheet" href="assets/css/tokens.css">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/fonts.css?v=10">
+<link rel="stylesheet" href="assets/css/tokens.css?v=10">
+<link rel="stylesheet" href="assets/css/site.css?v=10">
 </head>
 <body data-root="" data-page="home">
 
 <main>
-  <section class="hero">
-    <div class="photo"><span class="photo__cap">Главное фото раскопа</span></div>
-    <div class="wrap">
-      <div class="hero__inner">
-        <span class="hero__kicker"><svg class="icon"><use href="#i-calendar"/></svg>Сезон ГГГГ · <b data-season-fact="range"></b> · набор открыт</span>
+  <div class="wrap event event--top">
+    <div class="photo event__photo photo--tall"><span class="photo__cap">Главное фото: люди за работой на раскопе, не пейзаж</span></div>
+    <aside>
+      <div class="ecard">
+        <div class="kicker row" style="gap: var(--sp-2); justify-content: space-between">Археологическая экспедиция <span class="chip chip--ok"><svg class="icon"><use href="#i-check"/></svg>Набор открыт</span></div>
         <h1><span class="draft">Заголовок экспедиции</span></h1>
-        <p class="lede draft">Подзаголовок: что копаем и кого ищем</p>
-        <div class="actions">
-          <a class="btn btn--primary btn--lg" href="apply/login.html">Записаться</a>
-          <a class="btn btn--on-photo btn--lg" href="volunteers/">Что нужно знать</a>
+        <div class="ecard__dates">
+          <svg class="icon"><use href="#i-calendar"/></svg>
+          <div><b data-season-fact="range"></b><span>Сезон ГГГГ · приезд в любой день · <span data-season-fact="days"></span></span></div>
         </div>
-        <div class="hero__facts">
-          <span><svg class="icon"><use href="#i-check"/></svg>Бесплатно, кроме дороги</span>
-          <span><svg class="icon"><use href="#i-calendar"/></svg><span data-season-fact="days"></span></span>
-          <span><svg class="icon"><use href="#i-users"/></svg>С <span class="draft">16</span> лет, опыт не нужен</span>
+        <ul class="meta meta--lined">
+          <li><svg class="icon"><use href="#i-pin"/></svg><div><b>Борщёво на Дону</b><span>Хохольский район, Воронежская область</span></div></li>
+          <li><svg class="icon"><use href="#i-shovel"/></svg><div><b>Борщёво-5 <span class="draft">и другие стоянки</span></b><span>верхний палеолит, охотники на мамонтов</span></div></li>
+          <li><svg class="icon"><use href="#i-users"/></svg><div><b>С <span class="draft">16</span> лет, опыт не нужен</b><span>бесплатно, кроме дороги · <span data-season-fact="capacity"></span> в лагере</span></div></li>
+        </ul>
+        <a class="btn btn--primary btn--block btn--lg" href="apply/login.html">Записаться</a>
+        <div class="ecard__links">
+          <a href="season/"><svg class="icon"><use href="#i-calendar"/></svg>Календарь сезона</a>
+          <a href="getting-there/"><svg class="icon"><use href="#i-train"/></svg>Как добраться</a>
         </div>
+        <ul class="ecard__notes">
+          <li><svg class="icon"><use href="#i-clock"/></svg>Заявка за пять минут, ответ в чате обычно в течение дня</li>
+          <li><svg class="icon"><use href="#i-info"/></svg>Места распределяются по мере записи, набор может закрыться раньше</li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </aside>
+  </div>
 
-  <section class="section" id="about">
-    <div class="wrap split split--text-first">
-      <div class="prose">
+  <section class="section section--tight" id="about">
+    <div class="wrap event-cols">
+      <div class="prose" style="max-width:none">
         <h2>Что это за экспедиция</h2>
         <p class="draft">Абзац о том, что копаем и где</p>
         <p class="draft">Абзац о научном значении</p>
         <p class="draft">Абзац о людях и институте</p>
-        <a class="link-more" href="about/">Подробнее об экспедиции</a>
+        <p><a class="link-more" href="about/">Подробнее об экспедиции</a> · <a class="link-more" href="sites/">Стоянки</a></p>
       </div>
       <div class="stats">
         <div><div class="stat__value draft">NN</div><div class="stat__label">лет раскопок в районе</div></div>
@@ -60,10 +68,7 @@
 
   <section class="section section--ground" id="why">
     <div class="wrap">
-      <div class="section__head">
-        <h2>Зачем ехать</h2>
-        <p class="lede">Три честные причины, без «уникального опыта».</p>
-      </div>
+      <div class="section__head"><h2>Зачем ехать</h2><p class="lede">Три честные причины, без «уникального опыта».</p></div>
       <div class="reasons">
         <div class="reason"><div class="photo"><span class="photo__cap">Фото: работа в слое</span></div><h3 class="draft">Причина 1</h3><p class="draft">Описание: настоящая наука своими руками</p></div>
         <div class="reason"><div class="photo"><span class="photo__cap">Фото: Дон, лагерь</span></div><h3 class="draft">Причина 2</h3><p class="draft">Описание: место и быт, честно</p></div>
@@ -72,78 +77,94 @@
     </div>
   </section>
 
-  <section class="section" id="how">
-    <div class="wrap">
-      <div class="section__head">
-        <h2>Как это устроено</h2>
-        <p class="lede">Три шага от заявки до раскопа</p>
+  <section class="section section--tight" id="faq-reviews">
+    <div class="wrap event-cols">
+      <div>
+        <h2>Что спрашивают чаще всего</h2>
+        <div class="faq" style="max-width:none">
+          <details><summary class="draft">Вопрос про опыт и возраст</summary><p class="draft">Короткий честный ответ</p></details>
+          <details><summary class="draft">Вопрос про быт и жильё</summary><p class="draft">Короткий честный ответ</p></details>
+          <details><summary class="draft">Вопрос про деньги</summary><p class="draft">Короткий честный ответ</p></details>
+          <details><summary class="draft">Вопрос про дорогу и встречу</summary><p class="draft">Короткий честный ответ</p></details>
+        </div>
+        <p style="margin-top: var(--sp-3)"><a class="link-more" href="volunteers/#faq">Все вопросы</a> · <a class="link-more" href="volunteers/">Справочник волонтёра</a></p>
       </div>
-      <ol class="steps cols-3">
-        <li class="step"><svg class="icon"><use href="#i-ticket"/></svg><h3>Записаться</h3><p class="draft">Описание шага: карточка волонтёра, выбор стоянки и дат</p><a class="link-more" href="season/">Календарь сезона</a></li>
-        <li class="step"><svg class="icon"><use href="#i-handshake"/></svg><h3>Договориться</h3><p class="draft">Описание шага: подтверждение, чат с руководителем, встреча</p><a class="link-more" href="getting-there/">Как добраться</a></li>
-        <li class="step"><svg class="icon"><use href="#i-shovel"/></svg><h3>Приехать и копать</h3><p class="draft">Описание шага: дорога, лагерь, первый день</p><a class="link-more" href="volunteers/">Условия и быт</a></li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="section section--tight" id="partners">
-    <div class="wrap partners">
-      <span class="lbl">Экспедицию ведут</span>
-      <span class="logo">Логотип института</span>
-      <span class="logo">Логотип музея</span>
-      <span class="logo">Логотип партнёра</span>
-    </div>
-  </section>
-
-  <section class="quote-band" id="voice">
-    <div class="photo"><span class="photo__cap">Фото: волонтёры в лагере, живое</span></div>
-    <div class="wrap">
-      <figure>
-        <blockquote><p class="draft">Цитата волонтёра: две-три фразы о том, каково это было</p></blockquote>
-        <figcaption><span class="avatar">И</span><span><span class="draft">Имя</span>, волонтёр сезона <span class="draft">ГГГГ</span> · из <span class="draft">города</span></span></figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="section" id="faq">
-    <div class="wrap">
-      <div class="section__head"><h2>Что спрашивают чаще всего</h2></div>
-      <div class="faq-teaser">
-        <a href="volunteers/#fit"><svg class="icon"><use href="#i-users"/></svg><h3 class="draft">Вопрос про опыт и возраст</h3><p class="draft">Короткий честный ответ</p><span class="more">Подробнее в справочнике</span></a>
-        <a href="volunteers/#camp"><svg class="icon"><use href="#i-campfire"/></svg><h3 class="draft">Вопрос про быт и жильё</h3><p class="draft">Короткий честный ответ</p><span class="more">Жильё и быт</span></a>
-        <a href="volunteers/#money"><svg class="icon"><use href="#i-money"/></svg><h3 class="draft">Вопрос про деньги</h3><p class="draft">Короткий честный ответ</p><span class="more">Что бесплатно, что нет</span></a>
+      <div>
+        <h2>Отзывы волонтёров</h2>
+        <div class="rating" style="margin-bottom: var(--sp-4)"><span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span><b class="draft">4,9</b><span>из 5 · <span class="draft">NN</span> отзывов</span></div>
+        <div class="reviews-feed" id="feed" aria-live="polite"></div>
+        <div class="feed-dots" id="feed-dots" aria-label="Отзывы"></div>
+        <p style="margin-top: var(--sp-3)"><a class="link-more" href="reviews/">Все отзывы</a> · <a class="link-more" href="cabinet/review.html">Оставить свой</a></p>
       </div>
     </div>
   </section>
 
-  <section class="section section--tight" id="latest">
-    <div class="wrap">
-      <a class="latest" href="news/article.html">
+  <section class="section section--ground section--tight" id="organizer">
+    <div class="wrap event-cols" style="align-items:stretch">
+      <div class="organizer" style="background:var(--paper)">
+        <div class="photo photo--round"><span class="photo__cap" style="left:50%;transform:translateX(-50%)">Фото</span></div>
+        <div><div class="small">Начальник экспедиции</div><b>Лисицын Сергей Николаевич</b><p class="small"><span class="draft">Должность, институт</span> · ведёт экспедицию <span class="draft">N</span> лет</p><p style="margin-top: var(--sp-2)"><a class="link-more" href="lisitsyn/">О руководителе</a> · <a class="link-more" href="cabinet/chat.html">Задать вопрос</a></p></div>
+      </div>
+      <a class="latest" href="news/article.html" style="background:var(--paper)">
         <time class="draft">дата</time>
         <div><div class="small">Последняя новость</div><h3 class="draft">Заголовок новости</h3></div>
         <span class="link-more">Все новости</span>
       </a>
     </div>
   </section>
-
-  <section class="section cta-band">
-    <div class="wrap split">
-      <div>
-        <h2>Поехать с нами в сезон ГГГГ</h2>
-        <p class="lede draft">Одна строка призыва к записи</p>
-      </div>
-      <div class="actions">
-        <a class="btn btn--primary btn--lg" href="apply/login.html">Записаться</a>
-        <a class="btn btn--secondary btn--lg" href="cabinet/chat.html">Задать вопрос</a>
-      </div>
-    </div>
-  </section>
 </main>
 
-<script src="assets/js/chrome.js"></script>
-<script src="assets/js/season.js"></script>
-<script>Season.render({});</script>
-
+<script src="assets/js/chrome.js?v=10"></script>
+<script src="assets/js/season.js?v=10"></script>
+<script>
+Season.render({});
+// Reviews rotate on a fixed-height stage: cards move by transform only, so the page never reflows.
+(function () {
+  const feed = document.getElementById('feed'), dots = document.getElementById('feed-dots');
+  if (!feed) return;
+  const STAR = '<svg class="icon"><use href="#i-star"/></svg>';
+  const data = [
+    { i: 'И', n: 5, t: 'Последний отзыв: две-три фразы о том, каково это было' },
+    { i: 'М', n: 5, t: 'Ещё один отзыв: коротко о работе и людях', c: ' avatar--river' },
+    { i: 'К', n: 4, t: 'Отзыв: про быт честно и с юмором' },
+    { i: 'Д', n: 5, t: 'Отзыв: про находки и вечера у костра', c: ' avatar--river' },
+    { i: 'Е', n: 5, t: 'Отзыв: почему приеду ещё раз' },
+  ];
+  const card = r => { const el = document.createElement('div'); el.className = 'review-card'; el.innerHTML = `<div class="who"><span class="avatar${r.c || ''}">${r.i}</span><div><span class="draft">Имя</span><small>волонтёр сезона <span class="draft">ГГГГ</span> · из <span class="draft">города</span></small></div></div><div class="rating"><span class="stars">${STAR.repeat(r.n)}</span></div><p class="text draft">${r.t}</p>`; return el; };
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Measure the tallest card once so every slot has the same height.
+  let cardH = 0;
+  data.forEach(r => { const p = card(r); p.style.cssText = 'position:static;visibility:hidden'; feed.appendChild(p); cardH = Math.max(cardH, p.offsetHeight); p.remove(); });
+  const gap = parseFloat(getComputedStyle(document.documentElement).fontSize) * 0.75;
+  const setStage = () => { feed.style.setProperty('--card-h', cardH + 'px'); feed.style.height = (2 * cardH + gap) + 'px'; };
+  setStage(); addEventListener('resize', () => { cardH = 0; [...feed.children].forEach(el => { el.style.minHeight = '0'; cardH = Math.max(cardH, el.scrollHeight); el.style.minHeight = ''; }); setStage(); });
+  let head = 0, busy = false;
+  const place = (el, slot) => { el.classList.remove('slot-0', 'slot-1', 'slot-out', 'slot-in'); el.classList.add(slot); };
+  const first = card(data[0]), second = card(data[1]); place(first, 'slot-0'); place(second, 'slot-1'); feed.append(first, second);
+  data.forEach((_, k) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Отзыв ' + (k + 1)); b.addEventListener('click', () => jump(k)); dots.appendChild(b); });
+  const paint = () => [...dots.children].forEach((b, k) => b.setAttribute('aria-current', String(k === head)));
+  paint();
+  function step() {
+    if (busy) return; busy = true;
+    const [a, b] = feed.children; head = (head + 1) % data.length;
+    const c = card(data[(head + 1) % data.length]); place(c, 'slot-in'); feed.appendChild(c);
+    if (reduce) { a.remove(); place(b, 'slot-0'); place(c, 'slot-1'); busy = false; paint(); return; }
+    requestAnimationFrame(() => requestAnimationFrame(() => { place(a, 'slot-out'); place(b, 'slot-0'); place(c, 'slot-1'); }));
+    setTimeout(() => { a.remove(); busy = false; }, 600); paint();
+  }
+  function jump(k) { if (busy) return; head = k; feed.innerHTML = ''; const x = card(data[k]), y = card(data[(k + 1) % data.length]); place(x, 'slot-0'); place(y, 'slot-1'); feed.append(x, y); paint(); restart(); }
+  let timer; const start = () => { if (!reduce) timer = setInterval(step, 5000); }; const stop = () => clearInterval(timer); const restart = () => { stop(); start(); };
+  feed.addEventListener('mouseenter', stop); feed.addEventListener('mouseleave', start); feed.addEventListener('focusin', stop); feed.addEventListener('focusout', start);
+  document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+  start();
+})();
+// Photo matches the event card height on wide screens; falls back to aspect ratio on phones.
+(function () {
+  const photo = document.querySelector('.event__photo'), card = document.querySelector('.ecard');
+  if (!photo || !card || !('ResizeObserver' in window)) return;
+  const sync = () => { const wide = matchMedia('(min-width: 60rem)').matches; photo.style.height = wide ? card.offsetHeight + 'px' : ''; photo.style.aspectRatio = wide ? 'auto' : ''; };
+  new ResizeObserver(sync).observe(card); addEventListener('resize', sync); sync();
+})();
+</script>
 </body>
 </html>

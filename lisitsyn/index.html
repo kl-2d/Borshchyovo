@@ -9,35 +9,47 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css">
-<link rel="stylesheet" href="../assets/css/tokens.css">
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=10">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=10">
+<link rel="stylesheet" href="../assets/css/site.css?v=10">
 </head>
 <body data-root="../" data-page="lisitsyn">
 <main>
-<div class="page-head"><div class="wrap"><div class="crumbs"><a href="../">Главная</a> / Руководитель</div><h1>Лисицын Сергей Николаевич</h1><p class="lede draft">Должность, институт, степень</p></div></div>
-<section class="section section--tight"><div class="wrap">
-  <div class="bio">
-    <div class="photo photo--tall"><span class="photo__cap">Портрет</span></div>
-    <div>
-      <div class="prose">
-        <h2>Биография</h2>
-        <p class="draft">Абзац: образование и научный путь</p>
-        <p class="draft">Абзац: работа в Костёнках, руководство экспедицией</p>
-        <p class="draft">Абзац: научные интересы</p>
+  <div class="wrap event event--top">
+    <div class="photo event__photo photo--tall"><span class="photo__cap">Портрет на раскопе</span></div>
+    <aside>
+      <div class="ecard">
+        <div class="kicker">Начальник экспедиции</div>
+        <h1>Лисицын Сергей Николаевич</h1>
+        <ul class="regalia">
+          <li><svg class="icon"><use href="#i-shield"/></svg><span class="draft">Учёная степень, звание</span></li>
+          <li><svg class="icon"><use href="#i-flag"/></svg><span class="draft">Должность и институт (РАН)</span></li>
+          <li><svg class="icon"><use href="#i-trowel"/></svg><span>Ведёт экспедицию <span class="draft">N</span> лет, <span class="draft">N</span> сезонов в Костёнках</span></li>
+          <li><svg class="icon"><use href="#i-book"/></svg><span><span class="draft">N</span> публикаций по палеолиту Дона</span></li>
+        </ul>
+        <a class="btn btn--primary btn--block" href="../cabinet/chat.html">Задать вопрос</a>
+        <a class="btn btn--secondary btn--block" href="../apply/login.html">Записаться в экспедицию</a>
+        <p class="foot">Отвечает в чате сайта, обычно в течение дня.</p>
       </div>
-      <h2 style="margin-top: var(--sp-6)">Публикации</h2>
-      <ul class="pubs">
-        <li class="draft">Публикация</li>
-        <li class="draft">Публикация</li>
-        <li class="draft">Публикация</li>
-        <li class="draft">Публикация</li>
-      </ul>
-      <p style="margin-top: var(--sp-4)"><a class="link-more" href="#">Полный список публикаций</a></p>
-    </div>
+    </aside>
   </div>
-</div></section>
+  <section class="section section--tight"><div class="wrap split split--text-first" style="align-items:start">
+    <div class="prose">
+      <h2>Биография</h2>
+      <p class="draft">Абзац: образование и научный путь</p>
+      <p class="draft">Абзац: работа в Костёнках, руководство экспедицией</p>
+      <p class="draft">Абзац: научные интересы</p>
+      <h2 style="margin-top: var(--sp-6)">Слово руководителя</h2>
+      <blockquote style="margin:0; padding-left: var(--sp-4); border-left: 3px solid var(--river)"><p class="draft" style="font-size: var(--t-l); line-height: 1.4">Две-три фразы от первого лица: зачем ему волонтёры и что он от них ждёт</p></blockquote>
+    </div>
+    <div>
+      <h2>Публикации</h2>
+      <ul class="pubs"><li class="draft">Публикация</li><li class="draft">Публикация</li><li class="draft">Публикация</li><li class="draft">Публикация</li><li class="draft">Публикация</li></ul>
+      <p style="margin-top: var(--sp-3)"><a class="link-more" href="#">Полный список публикаций</a></p>
+    </div>
+  </div></section>
 </main>
-<script src="../assets/js/chrome.js"></script>
+<script src="../assets/js/chrome.js?v=10"></script>
+<script>(function () { const photo = document.querySelector('.event__photo'), card = document.querySelector('.ecard'); if (!photo || !card || !('ResizeObserver' in window)) return; const sync = () => { const wide = matchMedia('(min-width: 60rem)').matches; photo.style.height = wide ? card.offsetHeight + 'px' : ''; photo.style.aspectRatio = wide ? 'auto' : ''; }; new ResizeObserver(sync).observe(card); addEventListener('resize', sync); sync(); })();</script>
 </body>
 </html>

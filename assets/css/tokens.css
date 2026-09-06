@@ -25,6 +25,8 @@
   --ochre-wash: #fcece9;
   --sand: #c6dbef;
   --sand-wash: #f0f4f8;
+  --hover-wash: #f3eee3;      /* warm sand: the one warm note, hover fills only */
+  --hover-line: #e0d6c3;
   --chalkblue: #2171b5;      /* generic event fallback */
   --chalkblue-wash: #e6f0fa;
   --water: #80bfff;

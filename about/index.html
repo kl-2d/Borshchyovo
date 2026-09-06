@@ -9,9 +9,9 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css">
-<link rel="stylesheet" href="../assets/css/tokens.css">
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=10">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=10">
+<link rel="stylesheet" href="../assets/css/site.css?v=10">
 </head>
 <body data-root="../" data-page="about">
 <main>
@@ -21,14 +21,22 @@
     <div class="prose">
       <h2>История</h2>
       <p class="draft">Абзац: как и когда началась экспедиция</p>
-      <p class="draft">Абзац: ключевые этапы и находки</p>
+      <ol class="tl">
+        <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Начало работ</b><p class="draft">Одна строка о событии</p></div></li>
+        <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Ключевая находка</b><p class="draft">Одна строка о событии</p></div></li>
+        <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Новая стоянка</b><p class="draft">Одна строка о событии</p></div></li>
+        <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Первые волонтёры</b><p class="draft">Одна строка о событии</p></div></li>
+        <li><time>сейчас</time><span class="dot"></span><div><b>Борщёво-5 и другие стоянки</b><p>Сезон каждое лето, набор волонтёров через этот сайт</p></div></li>
+      </ol>
     </div>
     <div class="photo"><span class="photo__cap">Архивное фото</span></div>
   </div>
 </div></section>
 <section class="section section--ground section--tight"><div class="wrap">
-  <h2>Научное значение</h2>
-  <div class="prose"><p class="draft">Абзац: что дают эти раскопки науке</p><p class="draft">Абзац: с кем сотрудничаем, где публикуемся</p></div>
+  <div class="split" style="align-items:start">
+    <div class="prose"><h2>Научное значение</h2><p class="draft">Абзац: что дают эти раскопки науке</p><p class="draft">Абзац: с кем сотрудничаем, где публикуемся</p></div>
+    <div><h2>Публикации</h2><ul class="pubs"><li class="draft">Публикация</li><li class="draft">Публикация</li><li class="draft">Публикация</li><li class="draft">Публикация</li></ul><p style="margin-top: var(--sp-3)"><a class="link-more" href="../lisitsyn/">Полный список у руководителя</a></p></div>
+  </div>
 </div></section>
 <section class="section section--tight"><div class="wrap">
   <h2>Команда</h2>
@@ -38,6 +46,10 @@
     <div class="card"><div class="photo photo--square"><span class="photo__cap">Фото</span></div><h3 class="draft">Имя</h3><div class="card__meta draft">роль</div></div>
     <div class="card"><div class="photo photo--square"><span class="photo__cap">Фото</span></div><h3 class="draft">Имя</h3><div class="card__meta draft">роль</div></div>
   </div>
+</div></section>
+<section class="section section--tight"><div class="wrap split" style="align-items:start">
+  <div><h2>Для прессы и коллег</h2><p class="prose draft">Абзац: как получить комментарий, фото, доступ на раскоп; кому писать</p><a class="link-more" href="../contacts/">Контакты</a></div>
+  <div><h2>Документы</h2><ul class="regalia"><li><svg class="icon"><use href="#i-shield"/></svg><span class="draft">Открытый лист / разрешение на раскопки — номер и год</span></li><li><svg class="icon"><use href="#i-book"/></svg><span class="draft">Отчёты по сезонам</span></li><li><svg class="icon"><use href="#i-flag"/></svg><span class="draft">Организация, ведущая экспедицию</span></li></ul></div>
 </div></section>
 <section class="section section--ground section--tight"><div class="wrap">
   <h2>Партнёры</h2>
@@ -49,6 +61,6 @@
   </div>
 </div></section>
 </main>
-<script src="../assets/js/chrome.js"></script>
+<script src="../assets/js/chrome.js?v=10"></script>
 </body>
 </html>

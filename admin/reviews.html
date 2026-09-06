@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Отзывы — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=10">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=10">
+<link rel="stylesheet" href="../assets/css/site.css?v=10">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="reviews.html" aria-current="page"><svg class="icon"><use href="#i-star"/></svg>Отзывы <span class="badge">2</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap">
+  <div class="toolbar">
+    <div class="rating"><span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span><b class="draft">4,9</b><span>из 5 · <span class="draft">NN</span> опубликовано · 2 ждут проверки</span></div>
+    <span class="grow"></span>
+    <select aria-label="Фильтр"><option>Ждут проверки</option><option>Опубликованные</option><option>Скрытые</option><option>Все</option></select>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card is-pending"><div class="who"><span class="avatar">А</span><div><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a><small>Борщёво-5 · <span class="draft">дд.мм — дд.мм</span> · <span class="draft">город</span></small></div></div><div class="rating"><span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span></div><p class="text draft">Новый отзыв: текст</p><div class="meta"><span class="draft">дата</span><div class="row"><a class="btn btn--primary btn--sm" href="#">Опубликовать</a><a class="btn btn--secondary btn--sm" href="#">Скрыть</a></div></div></div>
+    <div class="review-card is-pending"><div class="who"><span class="avatar">Е</span><div><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a><small>Борщёво-5 · <span class="draft">дд.мм — дд.мм</span> · <span class="draft">город</span></small></div></div><div class="rating"><span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span></div><p class="text draft">Новый отзыв с критикой: текст</p><div class="meta"><span class="draft">дата</span><div class="row"><a class="btn btn--primary btn--sm" href="#">Опубликовать</a><a class="btn btn--secondary btn--sm" href="#">Скрыть</a></div></div></div>
+    <div class="review-card"><div class="who"><span class="avatar">М</span><div><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a><small>Борщёво-5 · <span class="draft">дд.мм — дд.мм</span> · <span class="draft">город</span></small></div></div><div class="rating"><span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span></div><p class="text draft">Опубликованный отзыв: текст</p><div class="meta"><span class="draft">дата</span><div class="row"><label class="check" style="min-height:auto"><input type="checkbox" checked> На главную</label><a class="btn btn--secondary btn--sm" href="#">Скрыть</a></div></div></div>
+    <div class="review-card"><div class="who"><span class="avatar">К</span><div><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a><small>Борщёво-5 · <span class="draft">дд.мм — дд.мм</span> · <span class="draft">город</span></small></div></div><div class="rating"><span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span></div><p class="text draft">Опубликованный отзыв: текст</p><div class="meta"><span class="draft">дата</span><div class="row"><label class="check" style="min-height:auto"><input type="checkbox"> На главную</label><a class="btn btn--secondary btn--sm" href="#">Скрыть</a></div></div></div>
+  </div>
+  <p class="small" style="margin-top: var(--sp-4)">Отзывы не редактируются — только публикуются или скрываются. На критику можно ответить в чате волонтёру.</p>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js?v=10"></script>
+</body>
+</html>
