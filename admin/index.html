@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сегодня — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html" aria-current="page"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap">
+  <div class="summary">
+    <a href="calendar.html"><div class="panel"><div class="stat__value">7</div><div class="stat__label">сейчас в лагере</div></div></a>
+    <a href="calendar.html"><div class="panel"><div class="stat__value">4</div><div class="stat__label">приезжают на этой неделе</div></div></a>
+    <a href="volunteers.html"><div class="panel"><div class="stat__value" style="color: var(--warn)">3</div><div class="stat__label">новые заявки</div></div></a>
+    <a href="chat.html"><div class="panel"><div class="stat__value" style="color: var(--river)">5</div><div class="stat__label">непрочитанных сообщений</div></div></a>
+  </div>
+  <div class="cols-2">
+    <div>
+      <div class="panel">
+        <h2>Приезжают на этой неделе</h2>
+        <ul class="list">
+          <li><span class="avatar">А</span><div><b><span class="draft">Имя</span> · Борщёво-5</b><span>пн <span class="draft">дд.мм</span> · поезд, ст. <span class="draft">название</span> в <span class="draft">чч:мм</span> · <b style="display:inline;color:var(--warn)">встретить</b></span></div><a class="btn btn--secondary btn--sm" href="chat.html">Написать</a></li>
+          <li><span class="avatar avatar--river">М</span><div><b><span class="draft">Имя</span> · Борщёво-5</b><span>вт <span class="draft">дд.мм</span> · своя машина, подвезёт 2</span></div><a class="btn btn--secondary btn--sm" href="chat.html">Написать</a></li>
+          <li><span class="avatar">К</span><div><b><span class="draft">Имя</span> · Борщёво-5</b><span>ср <span class="draft">дд.мм</span> · автобус · <b style="display:inline;color:var(--warn)">встретить</b></span></div><a class="btn btn--secondary btn--sm" href="chat.html">Написать</a></li>
+          <li><span class="avatar avatar--river">Д</span><div><b><span class="draft">Имя</span> · Борщёво-5</b><span>сб <span class="draft">дд.мм</span> · ещё не знает как</span></div><a class="btn btn--secondary btn--sm" href="chat.html">Написать</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>События на неделе</h2>
+        <ul class="events" id="week"></ul>
+        <a class="link-more small" href="calendar.html" style="display:block;margin-top: var(--sp-3)">Все события и добавить</a>
+      </div>
+      <div class="panel">
+        <h2>Уезжают</h2>
+        <ul class="list">
+          <li><span class="avatar">Е</span><div><b><span class="draft">Имя</span></b><span>чт <span class="draft">дд.мм</span> · поезд <span class="draft">чч:мм</span></span></div><span class="chip">довезти до станции</span></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <h2>Новые заявки</h2>
+        <ul class="list">
+          <li><span class="avatar">П</span><div><b><span class="draft">Имя</span>, <span class="draft">NN</span> лет</b><span>Борщёво-5 · <span class="draft">дд.мм — дд.мм</span> · без опыта</span></div><div class="row"><a class="btn btn--primary btn--sm" href="#">Подтвердить</a><a class="btn btn--secondary btn--sm" href="volunteers.html">Открыть</a></div></li>
+          <li><span class="avatar avatar--river">Р</span><div><b><span class="draft">Имя</span>, <span class="draft">NN</span> лет</b><span>Борщёво-5 · <span class="draft">дд.мм — дд.мм</span> · 2 сезона</span></div><div class="row"><a class="btn btn--primary btn--sm" href="#">Подтвердить</a><a class="btn btn--secondary btn--sm" href="volunteers.html">Открыть</a></div></li>
+          <li><span class="avatar">Т</span><div><b><span class="draft">Имя</span>, <span class="draft">NN</span> лет</b><span><span class="draft">Стоянка</span> · <span class="draft">дд.мм — дд.мм</span></span></div><div class="row"><a class="btn btn--primary btn--sm" href="#">Подтвердить</a><a class="btn btn--secondary btn--sm" href="volunteers.html">Открыть</a></div></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>Непрочитанные</h2>
+        <ul class="list">
+          <li><span class="avatar">А</span><div><b><span class="draft">Имя</span></b><span class="draft">Начало последнего сообщения…</span></div><a class="link-more" href="chat.html">Ответить</a></li>
+          <li><span class="avatar avatar--river">Д</span><div><b><span class="draft">Имя</span></b><span class="draft">Начало последнего сообщения…</span></div><a class="link-more" href="chat.html">Ответить</a></li>
+          <li><span class="avatar">С</span><div><b>Общий чат сезона</b><span class="draft">Начало последнего сообщения…</span></div><a class="link-more" href="chat.html">Открыть</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>Ждут ответа больше двух дней</h2>
+        <div class="empty-state" style="padding: var(--sp-5)"><svg class="icon"><use href="#i-check"/></svg><h3 style="font-size: var(--t-m)">Никто не ждёт</h3><p style="margin:0">Все заявки и сообщения отвечены.</p></div>
+      </div>
+      <div class="panel">
+        <h2>Отмены за неделю</h2>
+        <ul class="list">
+          <li><span class="avatar">Л</span><div><b><span class="draft">Имя</span> · Борщёво-5</b><span>отменил <span class="draft">дд.мм</span>: <span class="draft">причина</span></span></div><span class="chip chip--warn">место свободно</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+<script src="../assets/js/season.js"></script>
+<script>Season.render({ week: 'week' });</script>
+</body>
+</html>

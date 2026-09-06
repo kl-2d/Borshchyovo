@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Волонтёры — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html" aria-current="page"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap">
+  <div class="toolbar">
+    <input class="input grow" type="search" placeholder="Поиск по имени или телефону" aria-label="Поиск">
+    <select aria-label="Стоянка"><option>Все стоянки</option><option>Борщёво-5</option><option>Стоянка</option></select>
+    <select aria-label="Статус"><option>Все статусы</option><option>Заявка</option><option>Подтверждён</option><option>В лагере</option><option>Отменён</option></select>
+    <a class="btn btn--secondary btn--sm" href="#">Скачать CSV</a>
+  </div>
+  <div class="panel" style="padding:0; overflow:hidden">
+    <div class="table-scroll"><table class="table">
+      <thead><tr><th>Волонтёр</th><th>Год рожд.</th><th>Стоянка</th><th>Даты</th><th>Телефон</th><th>Транспорт</th><th>Встреча</th><th>Статус</th></tr></thead>
+      <tbody>
+<tr><td><span class="avatar" style="display:inline-grid;vertical-align:middle;margin-right:.5em">А</span><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a></td><td class="num draft">NNNN</td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td class="num">+7 ··· ··· ·· ··</td><td>поезд</td><td>нужна</td><td><span class="chip chip--ok">подтверждён</span></td></tr>
+<tr><td><span class="avatar" style="display:inline-grid;vertical-align:middle;margin-right:.5em">М</span><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a></td><td class="num draft">NNNN</td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td class="num">+7 ··· ··· ·· ··</td><td>машина, +2</td><td>—</td><td><span class="chip chip--ok">в лагере</span></td></tr>
+<tr><td><span class="avatar" style="display:inline-grid;vertical-align:middle;margin-right:.5em">К</span><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a></td><td class="num draft">NNNN</td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td class="num">+7 ··· ··· ·· ··</td><td>автобус</td><td>нужна</td><td><span class="chip chip--ok">подтверждён</span></td></tr>
+<tr><td><span class="avatar" style="display:inline-grid;vertical-align:middle;margin-right:.5em">П</span><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a></td><td class="num draft">NNNN</td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td class="num">+7 ··· ··· ·· ··</td><td>не знает</td><td>—</td><td><span class="chip chip--warn">заявка</span></td></tr>
+<tr><td><span class="avatar" style="display:inline-grid;vertical-align:middle;margin-right:.5em">Р</span><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a></td><td class="num draft">NNNN</td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td class="num">+7 ··· ··· ·· ··</td><td>электричка</td><td>нужна</td><td><span class="chip chip--warn">заявка</span></td></tr>
+<tr><td><span class="avatar" style="display:inline-grid;vertical-align:middle;margin-right:.5em">Л</span><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a></td><td class="num draft">NNNN</td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td class="num">+7 ··· ··· ·· ··</td><td>поезд</td><td>—</td><td><span class="chip ">отменён</span></td></tr>
+<tr><td><span class="avatar" style="display:inline-grid;vertical-align:middle;margin-right:.5em">Е</span><a href="volunteer.html"><span class="draft">Имя Фамилия</span></a></td><td class="num draft">NNNN</td><td><span class="draft">Стоянка</span></td><td class="num draft">дд.мм — дд.мм</td><td class="num">+7 ··· ··· ·· ··</td><td>поезд</td><td>нужна</td><td><span class="chip chip--ok">подтверждён</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <p class="small" style="margin-top: var(--sp-3)">Телефоны видны только здесь и в карточке. На сайте — никогда.</p>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+<script>
+// Whole row opens the volunteer card; links inside keep working.
+document.querySelectorAll('.table tbody tr').forEach(tr => { tr.tabIndex = 0; const go = () => location.href = 'volunteer.html'; tr.addEventListener('click', e => { if (!e.target.closest('a')) go(); }); tr.addEventListener('keydown', e => { if (e.key === 'Enter') go(); }); });
+</script>
+</body>
+</html>

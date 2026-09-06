@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Изменить заезд — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="cabinet" data-user="Имя">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Кабинет</h1><nav class="tabs" aria-label="Кабинет">
+<a href="arrival.html" aria-current="page"><svg class="icon"><use href="#i-calendar"/></svg>Мой заезд</a>
+<a href="profile.html"><svg class="icon"><use href="#i-users"/></svg>Карточка</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">2</span></a>
+</nav></div></div>
+<div class="app"><div class="wrap wrap--narrow">
+  <div class="crumbs"><a href="arrival.html">Мой заезд</a> / Изменить</div>
+  <form class="panel" onsubmit="return false">
+    <h2>Изменить заезд</h2>
+    <p class="muted" style="margin-bottom: var(--sp-5)">После сохранения заезд снова уйдёт на подтверждение — руководитель увидит изменения сразу.</p>
+    <div class="form-grid">
+      <div class="field field--full"><label>Стоянка</label><div class="radios"><label><input type="radio" name="site" checked>Борщёво-5</label><label><input type="radio" name="site"><span class="draft">Стоянка</span></label></div></div>
+      <div class="field field--full"><label>Даты</label><div class="dates"><input class="input" type="date" aria-label="Приезд"><span class="muted">—</span><input class="input" type="date" aria-label="Отъезд"></div><span class="hint"><a href="../season/#calendar">Посмотреть, когда свободнее</a></span></div>
+      <div class="field field--full"><label>Как добираетесь</label><div class="radios"><label><input type="radio" name="tr" checked>Поезд</label><label><input type="radio" name="tr">Электричка</label><label><input type="radio" name="tr">Автобус</label><label><input type="radio" name="tr">Своя машина</label></div></div>
+      <div class="field"><label for="e-train">Поезд и время прибытия</label><input class="input" id="e-train" type="text"></div>
+      <div class="field"><label class="check" style="margin-top: 1.7em"><input type="checkbox" checked> Нужна встреча на станции</label></div>
+    </div>
+    <div class="form-foot"><a class="link-more" href="arrival.html">Отмена</a><button class="btn btn--primary" type="submit">Сохранить изменения</button></div>
+  </form>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* Design tokens v7 — Scheme 1 "Chalk & Don River" from the Gemini deep-research
+   report (docs/gemini-deep-research-prompt.md → ~/Загрузки/Archaeological Website
+   Visual Identity.md), mapped onto the variable names the components already use.
+   Typography: Manrope (headings) + Onest (text/UI), self-hosted. */
+:root {
+  /* surfaces */
+  --paper: #ffffff;
+  --ground: #f7f9fc;
+  --ground-2: #ebf0f5;
+  --line: #d5dfe8;
+  --line-2: #a9bccd;
+  /* text */
+  --ink: #1a2733;
+  --ink-2: #4a5f73;
+  --ink-3: #7b8c9c;
+  /* actions and links (Don river blues) */
+  --action: #005c99;
+  --action-2: #00477a;
+  --river: #0066cc;          /* links, icons */
+  --river-2: #004c99;
+  --river-wash: #e6f0fa;
+  --river-deep: #004c99;
+  /* accent: today marker, badges (red ochre) */
+  --ochre: #d94833;
+  --ochre-wash: #fcece9;
+  --sand: #c6dbef;
+  --sand-wash: #f0f4f8;
+  --chalkblue: #2171b5;      /* generic event fallback */
+  --chalkblue-wash: #e6f0fa;
+  --water: #80bfff;
+  /* occupancy: perceptually uniform blue ramp */
+  --occ-0: #f0f4f8; --occ-1: #c6dbef; --occ-2: #6baed6; --occ-3: #2171b5; --occ-4: #08306b;
+  /* event kinds: qualitative, chroma-balanced */
+  --ev-holiday: #d73027; --ev-edu: #7b3294; --ev-guests: #f46d43; --ev-work: #8c510a;
+  /* status */
+  --ok: #1a7340; --ok-wash: #e9f7ef;
+  --warn: #9a5015; --warn-wash: #fdf5ec;
+  --bad: #c0392b; --bad-wash: #fdeeee;
+  --shadow-1: 0 1px 2px rgba(26,39,51,.06), 0 1px 1px rgba(26,39,51,.04);
+  --shadow-2: 0 8px 24px -8px rgba(26,39,51,.18), 0 2px 6px rgba(26,39,51,.06);
+
+  /* type */
+  --font-display: 'Manrope', 'Onest', 'Segoe UI', 'Arial', sans-serif;
+  --font-text: 'Onest', 'Segoe UI', 'Arial', sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.02em;
+  --t-xs: 0.8125rem; --t-s: 0.9375rem; --t-m: 1.0625rem; --t-l: 1.25rem;
+  --t-xl: 1.5rem; --t-2xl: 2rem; --t-3xl: clamp(2rem, 4vw, 2.5rem);
+  --lh-text: 1.55;
+
+  /* layout */
+  --w-max: 74rem; --w-text: 42rem;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem; --sp-5: 1.5rem;
+  --sp-6: 2rem; --sp-7: 3rem; --sp-8: 4rem; --sp-9: 6rem;
+  --r-s: 6px; --r-m: 12px; --r-l: 18px;
+  --focus: 2px solid var(--ochre);
+}

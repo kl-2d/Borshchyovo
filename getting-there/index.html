@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Как добраться — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="getting-there">
+<main>
+<div class="page-head"><div class="wrap"><div class="crumbs"><a href="../">Главная</a> / Как добраться</div><h1>Как добраться</h1><p class="lede">Лагерь стоит в селе Борщёво на Дону, Хохольский район Воронежской области. Ниже — все способы доехать и как мы встречаем.</p></div></div>
+<section class="section section--tight"><div class="wrap">
+  <div class="map" role="img" aria-label="Карта: лагерь экспедиции">
+    <svg class="map__river" viewBox="0 0 840 360" preserveAspectRatio="none" aria-hidden="true"><path d="M0 250 C120 230 180 300 300 270 S480 180 600 210 760 260 840 220" fill="none" stroke="#9fb9c6" stroke-width="18" stroke-linecap="round"/></svg>
+    <span class="map__pin"><svg class="icon"><use href="#i-pin"/></svg></span>
+    <span class="photo__cap">Яндекс.Карта с точкой лагеря и кнопкой «Маршрут»</span>
+  </div>
+</div></section>
+<section class="section section--tight" style="padding-top:0"><div class="wrap"><div class="narrow">
+  <h2>Как доехать</h2>
+  <div class="rtabs" role="tablist" aria-label="Транспорт">
+    <button role="tab" aria-selected="true" aria-controls="r-train"><svg class="icon"><use href="#i-train"/></svg>Поездом</button>
+    <button role="tab" aria-selected="false" aria-controls="r-local"><svg class="icon"><use href="#i-train"/></svg>Электричкой</button>
+    <button role="tab" aria-selected="false" aria-controls="r-bus"><svg class="icon"><use href="#i-bus"/></svg>Автобусом</button>
+    <button role="tab" aria-selected="false" aria-controls="r-car"><svg class="icon"><use href="#i-car"/></svg>На машине</button>
+  </div>
+  <div class="rpanel is-open" id="r-train" role="tabpanel">
+    <div class="route"><div><h3>Поездом до ст. <span class="draft">название</span></h3><p class="draft">Описание: какие поезда, из каких городов, когда лучше прибывать</p><ol class="rsteps"><li class="draft">Шаг маршрута</li><li class="draft">Шаг маршрута</li><li>Напишите номер поезда и время в <a href="../cabinet/chat.html">чат</a> — вас встретят на станции</li></ol></div><div class="route__facts"><b class="draft">N ч</b>от Москвы<br><span class="draft">N ₽</span></div></div>
+  </div>
+  <div class="rpanel" id="r-local" role="tabpanel">
+    <div class="route"><div><h3>Электричкой из Воронежа</h3><p class="draft">Описание: направление, станция, расписание</p><ol class="rsteps"><li class="draft">Шаг маршрута</li><li class="draft">Шаг маршрута</li></ol></div><div class="route__facts"><b class="draft">N ч</b><span class="draft">N ₽</span></div></div>
+  </div>
+  <div class="rpanel" id="r-bus" role="tabpanel">
+    <div class="route"><div><h3>Автобусом из Воронежа</h3><p class="draft">Описание: автовокзал, рейсы, где выходить</p><ol class="rsteps"><li class="draft">Шаг маршрута</li><li class="draft">Шаг маршрута</li></ol></div><div class="route__facts"><b class="draft">N ч</b><span class="draft">N ₽</span></div></div>
+  </div>
+  <div class="rpanel" id="r-car" role="tabpanel">
+    <div class="route"><div><h3>На машине</h3><p class="draft">Описание: трасса, съезд, где парковать, дорога в дождь</p><ol class="rsteps"><li class="draft">Шаг маршрута</li><li class="draft">Шаг маршрута</li><li>Можете взять попутчиков — отметьте это в заявке</li></ol></div><div class="route__facts"><b class="draft">N км</b>от Воронежа</div></div>
+  </div>
+  <h2 style="margin-top: var(--sp-7)">Встреча</h2>
+  <div class="callout"><svg class="icon" style="color: var(--river)"><use href="#i-users"/></svg><p class="draft">Описание встречи: где, как договориться, что делать если опаздываете</p></div>
+  <p style="margin-top: var(--sp-5)">Время прибытия и номер поезда напишите в <a href="../cabinet/chat.html">чате</a> после записи — так руководитель увидит, кого встречать.</p>
+</div></div></section>
+</main>
+<script src="../assets/js/chrome.js"></script>
+<script>
+// Route tabs: one transport at a time; remembered per browser.
+(function () {
+  const tabs = [...document.querySelectorAll('.rtabs [role="tab"]')];
+  const show = id => { tabs.forEach(t => t.setAttribute('aria-selected', String(t.getAttribute('aria-controls') === id))); document.querySelectorAll('.rpanel').forEach(p => p.classList.toggle('is-open', p.id === id)); try { localStorage.setItem('route-tab', id); } catch (e) {} };
+  tabs.forEach(t => t.addEventListener('click', () => show(t.getAttribute('aria-controls'))));
+  try { const saved = localStorage.getItem('route-tab'); if (saved && document.getElementById(saved)) show(saved); } catch (e) {}
+})();
+</script>
+</body>
+</html>

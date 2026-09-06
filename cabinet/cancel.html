@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Отменить заезд — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="cabinet" data-user="Имя">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Кабинет</h1><nav class="tabs" aria-label="Кабинет">
+<a href="arrival.html" aria-current="page"><svg class="icon"><use href="#i-calendar"/></svg>Мой заезд</a>
+<a href="profile.html"><svg class="icon"><use href="#i-users"/></svg>Карточка</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">2</span></a>
+</nav></div></div>
+<div class="app"><div class="wrap auth" style="max-width: 32rem">
+  <form class="panel" onsubmit="return false">
+    <h2>Отменить заезд</h2>
+    <p class="muted" style="margin-bottom: var(--sp-5)">Борщёво-5 · <span class="draft">дд.мм — дд.мм</span>. Место сразу освободится для других, а руководитель не будет ждать вас на станции.</p>
+    <div class="field"><label for="c-why">Почему</label><select id="c-why"><option>Изменились планы</option><option>Не получается по датам</option><option>Здоровье</option><option>Другое</option></select></div>
+    <div class="field"><label for="c-txt">Пару слов руководителю</label><textarea id="c-txt"></textarea><span class="hint">Необязательно</span></div>
+    <div class="callout callout--warn" style="margin-bottom: var(--sp-5)"><svg class="icon"><use href="#i-warn"/></svg><p>Отмену нельзя вернуть. Если захотите приехать позже — просто запишетесь снова.</p></div>
+    <div class="form-foot" style="border:0;padding:0;margin:0"><a class="link-more" href="arrival.html">Не отменять</a><button class="btn btn--danger" type="submit">Отменить заезд</button></div>
+  </form>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

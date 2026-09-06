@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сезон и стоянки — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html" aria-current="page"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap">
+  <div class="cols-2">
+    <div class="panel">
+      <h2>Сезон ГГГГ</h2>
+      <div class="form-grid">
+        <div class="field"><label>Начало сезона</label><input class="input" type="date" value="2026-06-15"><span class="hint">Обычно середина июня</span></div>
+        <div class="field"><label>Конец сезона</label><input class="input" type="date" value="2026-09-15"><span class="hint">Обычно середина сентября</span></div>
+        <div class="field"><label for="cap">Лагерь вмещает</label><input class="input" id="cap" type="number" value="12"><span class="hint">Человек одновременно — от этого считается «полно» в календаре</span></div>
+        <div class="field"><label for="mind">Минимум дней</label><input class="input" id="mind" type="number" value="7"></div>
+        <div class="field field--full"><label class="check"><input type="checkbox" checked> Набор открыт (кнопка «Записаться» на сайте)</label></div>
+      </div>
+      <div class="field"><label for="maxd">Максимум дней</label><input class="input" id="maxd" type="number" value="40"></div>
+      <div class="field"><label for="dayoff">Выходной день</label><select id="dayoff"><option>Воскресенье</option><option>Суббота</option><option>Нет</option></select><span class="hint">Отмечается в календаре на всех неделях сезона</span></div>
+      <button class="btn btn--primary" type="button">Сохранить сезон</button>
+      <p class="small" style="margin-top: var(--sp-3)">Даты и вместимость сразу меняют календарь на сайте. События сезона добавляются в <a href="calendar.html">календаре</a>.</p>
+    </div>
+    <div>
+      <div class="panel">
+        <h2>Стоянки</h2>
+        <ul class="menu">
+          <li><a href="site-edit.html">Борщёво-5</a><span class="chip chip--ok">в сезоне</span></li>
+          <li><a href="site-edit.html">Борщёво-5</a><span class="chip chip--ok">в сезоне</span></li>
+          <li><a href="#" class="draft">Название стоянки</a><span class="chip">не копаем</span></li>
+        </ul>
+        <a class="btn btn--secondary btn--sm" href="#" style="margin-top: var(--sp-4)">Добавить стоянку</a>
+      </div>
+      <div class="panel">
+        <h2>Уведомления</h2>
+        <div class="field"><label class="check"><input type="checkbox" checked> Письмо о новой заявке</label></div>
+        <div class="field"><label class="check"><input type="checkbox" checked> Письмо-дайджест непрочитанных раз в день</label></div>
+        <div class="field"><label class="check"><input type="checkbox"> Push-уведомления в браузере</label></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

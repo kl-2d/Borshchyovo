@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сезон — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="season">
+
+<main>
+  <div class="page-head">
+    <div class="wrap">
+      <div class="crumbs"><a href="../">Главная</a> / Сезон</div>
+      <h1>Календарь экспедиции</h1>
+      <p class="lede">Сезон ГГГГ. Даты раскопок задаёт руководитель; приезжайте в любой день внутри сезона.</p>
+    </div>
+  </div>
+
+  <section class="section section--tight" id="calendar">
+    <div class="wrap">
+      <div class="facts" style="margin-bottom: var(--sp-6)">
+        <div class="fact"><div class="fact__label">Даты раскопок</div><div class="fact__value" data-season-fact="range"></div></div>
+        <div class="fact"><div class="fact__label">Сколько можно жить</div><div class="fact__value" data-season-fact="days"></div></div>
+        <div class="fact"><div class="fact__label">Лагерь вмещает</div><div class="fact__value" data-season-fact="capacity"></div><div class="fact__sub">одновременно</div></div>
+      </div>
+
+      <div class="section__head row row--between" style="max-width:none">
+        <div><h2 style="margin-bottom: var(--sp-1)">События сезона</h2><p class="lede" style="margin:0">Праздники, лекции, экскурсии, гости. Цвет — тип события, он же в календаре.</p></div>
+      </div>
+      <ul class="events events--grid" id="events" style="margin-bottom: var(--sp-8)"></ul>
+
+      <div class="section__head row row--between" style="max-width:none">
+        <div><h2 style="margin-bottom: var(--sp-1)">По дням</h2><p class="lede" style="margin:0">Цвет — сколько людей в лагере. Нажмите на день: кто волонтёрит в это время и что запланировано.</p></div>
+        <div class="filters" id="filters" style="margin:0"><a href="#" data-site="all" aria-current="true">Все стоянки</a><a href="#" data-site="b5">Борщёво-5</a><a href="#" data-site="k"><span class="draft">Стоянка</span></a></div>
+      </div>
+
+      <div class="cal-layout cal-layout--tall">
+        <div>
+          <div class="cal" id="cal" data-apply-url="../apply/step3.html"></div>
+          <div class="cal-legend">
+            <span>Людей в лагере: <span class="scale"><i style="background:var(--occ-0)"></i><i style="background:var(--occ-1)"></i><i style="background:var(--occ-2)"></i><i style="background:var(--occ-3)"></i><i style="background:var(--occ-4)"></i></span>от никого до полного лагеря</span>
+            <span class="kinds">События: <span style="color:var(--ev-holiday)"><svg class="icon"><use href="#i-star"/></svg>праздник</span><span style="color:var(--ev-edu)"><svg class="icon"><use href="#i-book"/></svg>лекция, экскурсия</span><span style="color:var(--ev-guests)"><svg class="icon"><use href="#i-users"/></svg>гости, группы</span><span style="color:var(--ev-work)"><svg class="icon"><use href="#i-trowel"/></svg>работы лагеря</span></span>
+            <span><i style="background-image: repeating-linear-gradient(135deg, transparent 0 3px, rgba(26,39,51,.15) 3px 4px)"></i>выходной (воскресенье)</span>
+        <span><i style="box-shadow: inset 0 0 0 2px var(--ink)"></i>сегодня</span>
+            <span><i style="outline: 2px solid var(--chalkblue); outline-offset: -1px"></i>ваши даты</span>
+          </div>
+        </div>
+        <aside>
+          <div class="cal-side"><div class="panel day-panel" id="day"></div></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rules">
+    <div class="wrap">
+      <div class="split" style="align-items:start">
+        <div class="prose">
+          <h2>Как устроены заезды</h2>
+          <ul class="factlist">
+            <li><svg class="icon"><use href="#i-calendar"/></svg><div><h4>Свои даты</h4><p class="draft">Описание: минимум и максимум дней, почему так</p></div></li>
+            <li><svg class="icon"><use href="#i-train"/></svg><div><h4>Встреча</h4><p class="draft">Описание: как и где встречаем, к какому времени приезжать</p></div></li>
+            <li><svg class="icon"><use href="#i-warn"/></svg><div><h4>Если планы меняются</h4><p>Измените или отмените заезд в кабинете — руководитель увидит сразу и не будет ждать вас на станции.</p></div></li>
+            <li><svg class="icon"><use href="#i-list"/></svg><div><h4>Если мест нет</h4><p class="draft">Описание листа ожидания</p></div></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Готовы?</h3>
+          <p class="muted" style="margin-bottom: var(--sp-4)">Выберите даты в календаре выше или заполните заявку — даты можно указать и в ней.</p>
+          <a class="btn btn--primary btn--block" href="../apply/login.html">Записаться</a>
+          <a class="btn btn--secondary btn--block" href="../volunteers/" style="margin-top: var(--sp-2)">Сначала почитать условия</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="../assets/js/chrome.js"></script>
+<script src="../assets/js/season.js"></script>
+<script>Season.render({ calendar: 'cal', panel: 'day', events: 'events', filters: 'filters', mode: 'public' });</script>
+</body>
+</html>

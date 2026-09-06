@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Карточка волонтёра — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html" aria-current="page"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap">
+  <div class="crumbs"><a href="volunteers.html">Волонтёры</a> / Карточка</div>
+  <div class="two">
+    <div>
+      <div class="panel">
+        <div class="row row--between" style="margin-bottom: var(--sp-4)">
+          <div class="row"><span class="avatar avatar--lg" style="width:3.5rem;height:3.5rem;font-size:var(--t-l)">А</span><div><h2 style="margin:0" class="draft">Имя Фамилия</h2><span class="small"><span class="draft">NN</span> лет · из <span class="draft">города</span> · узнал из VK</span></div></div>
+          <div class="actions"><a class="btn btn--primary" href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Написать</a></div>
+        </div>
+        <dl class="kv">
+          <div><dt>Телефон</dt><dd>+7 ··· ··· ·· ·· <a href="#" class="small">показать</a></dd></div>
+          <div><dt>Запасной контакт</dt><dd class="draft">почта или VK</dd></div>
+          <div><dt>Опыт</dt><dd class="draft">опыт</dd></div>
+          <div><dt>Навыки</dt><dd class="draft">навыки</dd></div>
+          <div><dt>Снаряжение</dt><dd>Своя палатка и спальник</dd></div>
+          <div><dt>Здоровье и питание</dt><dd class="draft">ограничения</dd></div>
+        </dl>
+      </div>
+      <div class="panel">
+        <h2>Заезды</h2>
+        <div class="table-scroll"><table class="table">
+          <thead><tr><th>Даты</th><th>Стоянка</th><th>Транспорт</th><th>Встреча</th><th>Статус</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="num draft">дд.мм — дд.мм</td><td>Борщёво-5</td><td>поезд, <span class="draft">№ и время</span></td><td>нужна</td><td><span class="chip chip--ok">подтверждён</span></td><td><div class="row"><a class="btn btn--secondary btn--sm" href="#">Приехал</a></div></td></tr>
+            <tr><td class="num draft">дд.мм — дд.мм</td><td>Борщёво-5</td><td>не знает</td><td>—</td><td><span class="chip chip--warn">заявка</span></td><td><div class="row"><a class="btn btn--primary btn--sm" href="#">Подтвердить</a><a class="btn btn--secondary btn--sm" href="#">Отклонить</a></div></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <h3>Заметки для себя</h3>
+        <textarea aria-label="Заметки" placeholder="Видно только вам"></textarea>
+        <button class="btn btn--secondary btn--sm" type="button" style="margin-top: var(--sp-2)">Сохранить</button>
+      </div>
+      <div class="panel">
+        <h3>История</h3>
+        <ul class="list">
+          <li><span class="avatar">А</span><div><b>Заявка отправлена</b><span class="draft">дата</span></div><span></span></li>
+          <li><span class="avatar avatar--river">С</span><div><b>Вы подтвердили даты</b><span class="draft">дата</span></div><span></span></li>
+          <li><span class="avatar">А</span><div><b>Изменил даты отъезда</b><span class="draft">дата</span></div><span></span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Прошлые сезоны</h3>
+        <p class="small draft">Список сезонов, в которых человек уже был</p>
+      </div>
+    </div>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

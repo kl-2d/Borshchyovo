@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Стоянка — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html" aria-current="page"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap">
+  <div class="crumbs"><a href="settings.html">Сезон и стоянки</a> / Борщёво-5</div>
+  <div class="editor">
+    <form class="panel" onsubmit="return false">
+      <h2>Борщёво-5</h2>
+      <div class="form-grid">
+        <div class="field"><label for="s-name">Название</label><input class="input" id="s-name" value="Борщёво-5"></div>
+        <div class="field"><label for="s-epoch">Эпоха</label><input class="input" id="s-epoch" placeholder="Верхний палеолит"></div>
+        <div class="field"><label for="s-age">Возраст слоя</label><input class="input" id="s-age" placeholder="тыс. лет"></div>
+        <div class="field"><label for="s-year">Открыта</label><input class="input" id="s-year" type="number" placeholder="год"></div>
+        <div class="field field--full"><label for="s-sum">Одной строкой</label><input class="input" id="s-sum" placeholder="Что это за памятник"></div>
+        <div class="field field--full"><label for="s-desc">О памятнике</label><textarea id="s-desc" style="min-height: 10em"></textarea></div>
+        <div class="field field--full"><label for="s-work">Что делаем в этом сезоне</label><textarea id="s-work"></textarea></div>
+        <div class="field"><label class="check"><input type="checkbox" checked> Копаем в этом сезоне</label><span class="hint">Показывается в форме записи</span></div>
+        <div class="field"><label for="s-geo">Координаты</label><input class="input" id="s-geo" placeholder="51.339, 39.125"><span class="hint">Заполняются сами, когда ставите метку на карте</span></div>
+      </div>
+      <div class="map map--edit" style="aspect-ratio: 16/7; margin-top: var(--sp-2)" role="img" aria-label="Карта: поставить метку стоянки">
+        <svg class="map__river" viewBox="0 0 840 360" preserveAspectRatio="none" aria-hidden="true"><path d="M0 250 C120 230 180 300 300 270 S480 180 600 210 760 260 840 220" fill="none" stroke="#9fb9c6" stroke-width="18" stroke-linecap="round"/></svg>
+        <span class="map__hint">Нажмите на карту, чтобы поставить или передвинуть метку</span>
+        <span class="map__pin" style="left:36%;top:52%"><svg class="icon"><use href="#i-pin"/></svg><span class="lbl">Борщёво-5</span></span>
+        <span class="map__pin is-muted" style="left:30%;top:70%"><svg class="icon"><use href="#i-tent"/></svg><span class="lbl">Лагерь</span></span>
+      </div>
+      <div class="dropzone" style="margin: var(--sp-4) 0"><b>Фото стоянки</b>Обложка и находки</div>
+      <div class="form-foot"><a class="link-more" href="settings.html">Отмена</a><button class="btn btn--primary" type="submit">Сохранить</button></div>
+    </form>
+    <div>
+      <div class="panel"><h3>На сайте</h3><p class="small" style="margin-bottom: var(--sp-3)">Страница стоянки собирается из этих полей.</p><a class="link-more" href="../sites/site.html">Посмотреть страницу</a></div>
+    </div>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

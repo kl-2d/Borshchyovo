@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мой заезд — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="cabinet" data-user="Имя">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Кабинет</h1><nav class="tabs" aria-label="Кабинет">
+<a href="arrival.html" aria-current="page"><svg class="icon"><use href="#i-calendar"/></svg>Мой заезд</a>
+<a href="profile.html"><svg class="icon"><use href="#i-users"/></svg>Карточка</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">2</span></a>
+</nav></div></div>
+<div class="app"><div class="wrap wrap--narrow">
+  <div class="status"><svg class="icon"><use href="#i-check"/></svg><div><b>Заезд подтверждён</b><span>Руководитель подтвердил ваши даты. Дальше — дорога и встреча.</span></div></div>
+  <div class="two">
+    <div>
+      <div class="panel">
+        <h2>Борщёво-5 · <span class="draft">дд.мм — дд.мм</span></h2>
+        <dl class="kv">
+          <div><dt>Приезд</dt><dd class="draft">дд.мм, день недели</dd></div>
+          <div><dt>Отъезд</dt><dd class="draft">дд.мм, день недели</dd></div>
+          <div><dt>Как добираетесь</dt><dd>Поезд, ст. <span class="draft">название</span></dd></div>
+          <div><dt>Встреча</dt><dd>Нужна · <span class="draft">чч:мм</span></dd></div>
+          <div><dt>Снаряжение</dt><dd>Своя палатка и спальник</dd></div>
+          <div><dt>Могу подвезти</dt><dd>—</dd></div>
+        </dl>
+        <div class="actions" style="margin-top: var(--sp-5)">
+          <a class="btn btn--secondary" href="edit.html">Изменить даты или транспорт</a>
+          <a class="btn btn--secondary" href="cancel.html" style="color: var(--bad)">Отменить заезд</a>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Что дальше</h2>
+        <ul class="progress">
+          <li class="is-done"><span class="dot"><svg class="icon"><use href="#i-check"/></svg></span><div><b>Заявка отправлена</b><p class="draft">дата</p></div></li>
+          <li class="is-done"><span class="dot"><svg class="icon"><use href="#i-check"/></svg></span><div><b>Даты подтверждены</b><p class="draft">дата</p></div></li>
+          <li class="is-now"><span class="dot"></span><div><b>Договориться о встрече</b><p>Напишите в чат номер поезда и время прибытия.</p></div></li>
+          <li><span class="dot"></span><div><b>Собраться</b><p><a href="../volunteers/#pack">Список, что взять</a></p></div></li>
+          <li><span class="dot"></span><div><b>Приехать</b><p class="draft">дд.мм</p></div></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <h3>Чат с экспедицией</h3>
+        <p class="small" style="margin-bottom: var(--sp-3)">Два непрочитанных сообщения от руководителя.</p>
+        <a class="btn btn--primary btn--block" href="chat.html">Открыть чат</a>
+      </div>
+      <div class="panel">
+        <h3>Пока вы в лагере</h3>
+        <ul class="events" id="stay"></ul>
+        <a class="link-more small" href="../season/" style="display:block;margin-top: var(--sp-3)">Весь календарь</a>
+      </div>
+      <div class="panel">
+        <h3>Дорога</h3>
+        <p class="small draft" style="margin-bottom: var(--sp-3)">Краткое описание маршрута для выбранного транспорта</p>
+        <a class="link-more" href="../getting-there/">Все варианты дороги</a>
+      </div>
+      <div class="panel">
+        <h3>Ещё один заезд</h3>
+        <p class="small" style="margin-bottom: var(--sp-3)">Можно записаться на вторую смену или другую стоянку.</p>
+        <a class="btn btn--secondary btn--block" href="../apply/step3.html">Добавить заезд</a>
+      </div>
+    </div>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+<script src="../assets/js/season.js"></script>
+<script>Season.render({ stay: 'stay' });</script>
+</body>
+</html>

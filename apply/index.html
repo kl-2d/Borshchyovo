@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Записаться — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="apply">
+<main class="app">
+  <div class="wrap">
+    <div class="two" style="grid-template-columns: minmax(0,1fr) 20rem">
+      <form class="panel" onsubmit="return false" style="padding: var(--sp-6)">
+        <h1 style="font-size: var(--t-2xl); margin-bottom: var(--sp-2)">Записаться в экспедицию</h1>
+        <p class="muted" style="margin-bottom: var(--sp-5)">Пять минут. Черновик сохраняется сам — можно вернуться позже.</p>
+        <ol class="stepper">
+          <li class="is-done">Вход</li>
+          <li class="is-now">О себе</li>
+          <li>Заезд</li>
+        </ol>
+
+        <fieldset style="border:0;padding:0;margin:0">
+          <div class="form-grid">
+            <div class="field"><label for="a-name">Имя и фамилия</label><input class="input" id="a-name" type="text"></div>
+            <div class="field"><label for="a-year">Год рождения</label><input class="input" id="a-year" type="number" inputmode="numeric"><span class="hint">С 16 лет — с согласия родителей</span></div>
+            <div class="field"><label for="a-phone">Телефон</label><input class="input" id="a-phone" type="tel"><span class="hint">Видит только руководитель экспедиции</span></div>
+            <div class="field"><label for="a-alt">Запасной контакт</label><input class="input" id="a-alt" type="text"><span class="hint">Почта или VK, если телефон вне сети</span></div>
+            <div class="field field--full"><label for="a-city">Откуда едете</label><input class="input" id="a-city" type="text"><span class="hint">Город. Поможет найти попутчиков на тот же поезд</span></div>
+          </div>
+          <p class="small" style="margin: var(--sp-2) 0 0">Четыре поля — и достаточно. Опыт и навыки спросим на следующем шаге, они необязательны.</p>
+        </fieldset>
+
+        <div class="form-foot">
+          <a class="link-more" href="login.html">← Назад</a>
+          <a class="btn btn--primary" href="step3.html">Дальше: заезд</a>
+        </div>
+      </form>
+
+      <aside>
+        <div class="panel">
+          <h3>Что будет после</h3>
+          <ul class="progress">
+            <li class="is-now"><span class="dot"></span><div><b>Вы отправляете заявку</b><p>Даты, стоянка, как добираетесь.</p></div></li>
+            <li><span class="dot"></span><div><b>Руководитель подтверждает</b><p>Обычно в течение дня. Напишет в чат.</p></div></li>
+            <li><span class="dot"></span><div><b>Договариваетесь о встрече</b><p>Поезд, время, кто встретит.</p></div></li>
+            <li><span class="dot"></span><div><b>Приезжаете</b><p>Ваше имя появится в календаре заездов.</p></div></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Ещё не решили?</h3>
+          <p class="small" style="margin-bottom: var(--sp-3)">Условия, быт, что взять и кому не стоит ехать.</p>
+          <a class="link-more" href="../volunteers/">Всё для волонтёра</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

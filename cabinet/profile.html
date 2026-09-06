@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Карточка волонтёра — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="cabinet" data-user="Имя">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Кабинет</h1><nav class="tabs" aria-label="Кабинет">
+<a href="arrival.html"><svg class="icon"><use href="#i-calendar"/></svg>Мой заезд</a>
+<a href="profile.html" aria-current="page"><svg class="icon"><use href="#i-users"/></svg>Карточка</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">2</span></a>
+</nav></div></div>
+<div class="app"><div class="wrap wrap--narrow">
+  <form class="panel" onsubmit="return false">
+    <h2>Карточка волонтёра</h2>
+    <p class="muted" style="margin-bottom: var(--sp-5)">Эти данные видит только руководитель экспедиции. Публично — имя и смена.</p>
+    <fieldset style="border:0;padding:0;margin:0 0 var(--sp-5)">
+      <h3>Контакты</h3>
+      <div class="form-grid">
+        <div class="field"><label for="p-name">Имя и фамилия</label><input class="input" id="p-name" type="text"></div>
+        <div class="field"><label for="p-year">Год рождения</label><input class="input" id="p-year" type="number"></div>
+        <div class="field"><label for="p-phone">Телефон</label><input class="input" id="p-phone" type="tel"></div>
+        <div class="field"><label for="p-alt">Запасной контакт</label><input class="input" id="p-alt" type="text"></div>
+      </div>
+    </fieldset>
+    <fieldset style="border:0;padding:0;margin:0 0 var(--sp-5)">
+      <h3>Опыт и навыки</h3>
+      <div class="form-grid">
+        <div class="field field--full"><label for="p-exp">Опыт раскопок</label><input class="input" id="p-exp" type="text"></div>
+        <div class="field field--full"><label for="p-skills">Полезные навыки</label><input class="input" id="p-skills" type="text"></div>
+      </div>
+    </fieldset>
+    <fieldset style="border:0;padding:0;margin:0 0 var(--sp-5)">
+      <h3>Быт и здоровье</h3>
+      <div class="form-grid">
+        <div class="field"><label class="check"><input type="checkbox" checked> Своя палатка и спальник</label></div>
+        <div class="field"><label class="check"><input type="checkbox"> Могу подвезти на машине</label></div>
+        <div class="field field--full"><label for="p-health">Ограничения по питанию или здоровью</label><textarea id="p-health"></textarea></div>
+      </div>
+    </fieldset>
+    <div class="actions">
+      <button class="btn btn--primary" type="submit">Сохранить</button>
+      <span class="small">Последнее изменение: <span class="draft">дата</span></span>
+    </div>
+  </form>
+  <div class="panel">
+    <h3>Аккаунт</h3>
+    <p class="small">Вход через VK · <a href="#">Сменить почту</a> · <a href="#">Выйти</a></p>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

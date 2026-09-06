@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Чат — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html" aria-current="page"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap">
+  <div class="chat" style="height: min(74vh, 48rem)">
+    <div class="chat__list">
+      <a href="#" aria-current="true"><span class="avatar">А</span><div><b><span class="draft">Имя</span> · <span class="draft">дд.мм — дд.мм</span></b><span class="draft">Начало сообщения…</span></div><span class="badge" style="background:var(--ochre);border-radius:999px;padding:.1em .5em;font-size:.7rem;font-weight:600;color:var(--ink)">2</span></a>
+      <a href="#"><span class="avatar avatar--river">Д</span><div><b><span class="draft">Имя</span> · <span class="draft">дд.мм — дд.мм</span></b><span class="draft">Начало сообщения…</span></div><span class="badge" style="background:var(--ochre);border-radius:999px;padding:.1em .5em;font-size:.7rem;font-weight:600;color:var(--ink)">1</span></a>
+      <a href="#"><span class="avatar">С</span><div><b>Общий чат сезона</b><span>12 участников</span></div><span class="badge" style="background:var(--ochre);border-radius:999px;padding:.1em .5em;font-size:.7rem;font-weight:600;color:var(--ink)">2</span></a>
+      <a href="#"><span class="avatar">П</span><div><b><span class="draft">Имя</span> · заявка</b><span class="draft">Начало сообщения…</span></div></a>
+      <a href="#"><span class="avatar avatar--river">М</span><div><b><span class="draft">Имя</span> · в лагере</b><span class="draft">Начало сообщения…</span></div></a>
+      <a href="#"><span class="avatar">К</span><div><b><span class="draft">Имя</span> · <span class="draft">дд.мм — дд.мм</span></b><span class="draft">Начало сообщения…</span></div></a>
+    </div>
+    <div class="chat__thread">
+      <div class="chat__head"><span class="avatar">А</span><div><b><span class="draft">Имя Фамилия</span></b><br><span>Борщёво-5 · <span class="draft">дд.мм — дд.мм</span> · поезд · <a href="volunteers.html">карточка</a></span></div></div>
+      <div class="chat__msgs">
+        <div class="msg msg--sys">Заявка отправлена · <span class="draft">дата</span></div>
+        <div class="msg msg--me"><span class="draft">Ваше сообщение: подтверждение дат</span><time class="draft">чч:мм</time></div>
+        <div class="msg msg--them"><span class="draft">Ответ волонтёра</span><time class="draft">чч:мм</time></div>
+        <div class="msg msg--me"><span class="draft">Ваш вопрос про поезд</span><time class="draft">чч:мм</time></div>
+        <div class="msg msg--them"><span class="draft">Номер поезда и время прибытия</span><time class="draft">чч:мм</time></div>
+        <div class="msg msg--them"><span class="draft">Уточняющий вопрос</span><time class="draft">чч:мм</time></div>
+      </div>
+      <form class="chat__compose" onsubmit="return false">
+        <textarea aria-label="Сообщение" placeholder="Написать…"></textarea>
+        <button class="btn btn--primary" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

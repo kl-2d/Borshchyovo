@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Галерея — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="gallery">
+<main>
+<div class="page-head"><div class="wrap"><div class="crumbs"><a href="../">Главная</a> / Галерея</div><h1>Галерея</h1><p class="lede">Фотографии с раскопа и из лагеря по сезонам и темам.</p></div></div>
+<section class="section section--tight"><div class="wrap">
+  <div class="filters"><a href="#" aria-current="true">Все</a><a href="#">Раскоп</a><a href="#">Находки</a><a href="#">Лагерь</a><a href="#">Люди</a><a href="#" class="draft">Сезон ГГГГ</a></div>
+  <div class="masonry">
+    <div class="photo span-2"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo span-2"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+  </div>
+  <p class="small" style="margin-top: var(--sp-4)">Нажмите на фото — откроется во весь экран с подписью.</p>
+</div></section>
+</main>
+<script src="../assets/js/chrome.js"></script>
+<script>
+document.querySelectorAll('.filters a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); document.querySelectorAll('.filters a').forEach(x => x.removeAttribute('aria-current')); a.setAttribute('aria-current', 'true'); }));
+</script>
+</body>
+</html>

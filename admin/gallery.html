@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Галерея — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html" aria-current="page"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap">
+  <div class="editor">
+    <div>
+      <div class="panel" style="margin-bottom: var(--sp-4)">
+        <div class="row row--between" style="margin-bottom: var(--sp-4)"><h2 style="margin:0">Альбом: <span class="draft">Название</span></h2><div class="row"><select aria-label="Альбом"><option>Сезон ГГГГ · раскоп</option><option>Находки</option><option>Лагерь</option><option>Люди</option></select><a class="btn btn--secondary btn--sm" href="#">Новый альбом</a></div></div>
+        <div class="dropzone" style="margin-bottom: var(--sp-4)"><b>Перетащите фото сюда</b>Можно сразу много. Сжимаем сами, подписи добавите после.</div>
+        <div class="cols-4">
+          <div><div class="photo photo--square"><span class="photo__cap">Фото</span></div><input class="input" style="margin-top: var(--sp-2)" placeholder="Подпись"></div>
+          <div><div class="photo photo--square"><span class="photo__cap">Фото</span></div><input class="input" style="margin-top: var(--sp-2)" placeholder="Подпись"></div>
+          <div><div class="photo photo--square"><span class="photo__cap">Фото</span></div><input class="input" style="margin-top: var(--sp-2)" placeholder="Подпись"></div>
+          <div><div class="photo photo--square"><span class="photo__cap">Фото</span></div><input class="input" style="margin-top: var(--sp-2)" placeholder="Подпись"></div>
+          <div><div class="photo photo--square"><span class="photo__cap">Фото</span></div><input class="input" style="margin-top: var(--sp-2)" placeholder="Подпись"></div>
+          <div><div class="photo photo--square"><span class="photo__cap">Фото</span></div><input class="input" style="margin-top: var(--sp-2)" placeholder="Подпись"></div>
+        </div>
+        <div class="actions" style="margin-top: var(--sp-5)"><button class="btn btn--primary" type="button">Сохранить подписи</button><span class="small">Галочка на фото — «показывать на главной»</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <h3>Альбомы</h3>
+        <ul class="menu">
+          <li><a href="#">Сезон ГГГГ · раскоп</a><span class="small">24</span></li>
+          <li><a href="#">Находки</a><span class="small">11</span></li>
+          <li><a href="#">Лагерь</a><span class="small">18</span></li>
+          <li><a href="#">Люди</a><span class="small">30</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Согласие людей</h3>
+        <p class="small">Если на фото узнаваемые лица, отметьте, что люди не против публикации. Без отметки фото не попадёт на сайт.</p>
+      </div>
+    </div>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

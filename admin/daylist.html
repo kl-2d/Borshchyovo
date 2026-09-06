@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Список на день — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html" aria-current="page"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap wrap--narrow daylist">
+  <div class="row row--between no-print" style="margin-bottom: var(--sp-5)">
+    <div class="crumbs" style="margin:0"><a href="calendar.html">Календарь</a> / Список на день</div>
+    <div class="actions"><input class="input" type="date" value="2026-07-21" aria-label="День" style="width:auto"><button class="btn btn--primary btn--sm" type="button" onclick="print()"><svg class="icon"><use href="#i-download"/></svg>Распечатать</button></div>
+  </div>
+  <div class="panel">
+    <h1>21 июля, вторник</h1>
+    <p class="muted" style="margin-bottom: var(--sp-5)">Костёнки-Борщёво · в лагере 7 из 12 · для станции и кухни</p>
+    <h3>Приезжают</h3>
+    <div class="table-scroll" style="margin-bottom: var(--sp-5)"><table class="table">
+      <thead><tr><th>Кто</th><th>Стоянка</th><th>Как</th><th>Когда</th><th>Встретить</th><th>Телефон</th></tr></thead>
+      <tbody><tr><td><span class="draft">Имя Фамилия</span></td><td>Борщёво-5</td><td>поезд № <span class="draft">NNN</span></td><td>07:40, ст. <span class="draft">название</span></td><td><b>да</b></td><td class="phone">+7 ··· ··· ·· ··</td></tr></tbody>
+    </table></div>
+    <h3>Уезжают</h3>
+    <div class="table-scroll" style="margin-bottom: var(--sp-5)"><table class="table">
+      <thead><tr><th>Кто</th><th>Как</th><th>Когда</th><th>Довезти</th></tr></thead>
+      <tbody><tr><td><span class="draft">Имя Фамилия</span></td><td>поезд</td><td>19:20</td><td>до станции</td></tr></tbody>
+    </table></div>
+    <h3>В лагере</h3>
+    <div class="table-scroll"><table class="table">
+      <thead><tr><th>Кто</th><th>Стоянка</th><th>Даты</th><th>Питание</th><th>Заметка</th></tr></thead>
+      <tbody>
+        <tr><td><span class="draft">Имя Фамилия</span></td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td>—</td><td class="draft">заметка</td></tr>
+        <tr><td><span class="draft">Имя Фамилия</span></td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td>без мяса</td><td></td></tr>
+        <tr><td><span class="draft">Имя Фамилия</span></td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td>—</td><td></td></tr>
+        <tr><td><span class="draft">Имя Фамилия</span></td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td>—</td><td></td></tr>
+        <tr><td><span class="draft">Имя Фамилия</span></td><td>Борщёво-5</td><td class="num draft">дд.мм — дд.мм</td><td>аллергия</td><td class="draft">заметка</td></tr>
+        <tr><td><span class="draft">Имя Фамилия</span></td><td><span class="draft">Стоянка</span></td><td class="num draft">дд.мм — дд.мм</td><td>—</td><td></td></tr>
+      </tbody>
+    </table></div>
+    <p class="small" style="margin-top: var(--sp-4)">Телефоны — только на этой распечатке. Не оставляйте её на виду.</p>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

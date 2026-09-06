@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кабинет — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="cabinet" data-user="Имя">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Кабинет</h1><nav class="tabs" aria-label="Кабинет">
+<a href="empty.html" aria-current="page"><svg class="icon"><use href="#i-calendar"/></svg>Мой заезд</a>
+<a href="profile.html"><svg class="icon"><use href="#i-users"/></svg>Карточка</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат</a>
+</nav></div></div>
+<div class="app"><div class="wrap wrap--narrow">
+  <div class="banner banner--bad"><svg class="icon"><use href="#i-warn"/></svg><span>Нет связи. Сообщения отправятся, когда интернет вернётся; календарь показан на <span class="draft">чч:мм</span>.</span></div>
+  <div class="empty-state">
+    <svg class="icon"><use href="#i-tent"/></svg>
+    <h3>Заезда пока нет</h3>
+    <p>Выберите даты и стоянку — руководитель подтвердит, и здесь появится ваш заезд, дорога и встреча.</p>
+    <div class="actions" style="justify-content:center"><a class="btn btn--primary" href="../apply/step3.html">Записаться</a><a class="link-more" href="../season/">Посмотреть календарь</a></div>
+  </div>
+  <div class="panel" style="margin-top: var(--sp-5)">
+    <h3>Прошлые сезоны</h3>
+    <ul class="list">
+      <li><span class="avatar" style="background:var(--ground-2)">ГГ</span><div><b>Сезон <span class="draft">ГГГГ</span></b><span>Борщёво-5 · <span class="draft">дд.мм — дд.мм</span> · <span class="draft">N</span> дней</span></div><span class="chip">был</span></li>
+    </ul>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

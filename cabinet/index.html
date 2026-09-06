@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вход — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="cabinet">
+<main class="app">
+  <div class="wrap auth">
+    <div class="panel">
+      <h1>Войти</h1>
+      <p class="muted" style="margin-bottom: var(--sp-5)">Кабинет волонтёра: заезд, карточка и чат с руководителем.</p>
+      <div class="auth-list">
+        <button type="button" class="btn btn--vk btn--block btn--lg"><svg class="icon"><use href="#i-vk"/></svg>Войти через ВКонтакте</button>
+        <button type="button" class="btn btn--yandex btn--block btn--lg"><svg class="icon"><use href="#i-yandex"/></svg>Войти через Яндекс</button>
+      </div>
+      <div class="or">или по почте и паролю</div>
+      <form onsubmit="return false">
+        <div class="field"><label for="l-mail">Электронная почта</label><input class="input" id="l-mail" type="email"></div>
+        <div class="field"><label for="l-pass">Пароль</label><input class="input" id="l-pass" type="password"><span class="hint"><a href="#">Забыли пароль?</a></span></div>
+        <button class="btn btn--secondary btn--block" type="submit">Войти</button>
+      </form>
+      <p class="small" style="margin: var(--sp-5) 0 0">Первый раз здесь? <a href="../apply/login.html">Записаться в экспедицию</a> — кабинет появится после заявки.</p>
+    </div>
+  </div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

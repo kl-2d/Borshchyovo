@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Записаться: заезд — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="apply">
+<main class="app">
+  <div class="wrap">
+    <div class="two" style="grid-template-columns: minmax(0,1fr) 20rem">
+      <form class="panel" onsubmit="return false" style="padding: var(--sp-6)">
+        <h1 style="font-size: var(--t-2xl); margin-bottom: var(--sp-2)">Записаться в экспедицию</h1>
+        <p class="muted" style="margin-bottom: var(--sp-5)">Последний шаг: когда и куда приезжаете.</p>
+        <ol class="stepper">
+          <li class="is-done">Вход</li>
+          <li class="is-done">О себе</li>
+          <li class="is-now">Заезд</li>
+        </ol>
+        <fieldset style="border:0;padding:0;margin:0">
+          <div class="form-grid">
+            <div class="field field--full"><label>Стоянка</label>
+              <div class="radios"><label><input type="radio" name="site" checked>Борщёво-5</label><label><input type="radio" name="site"><span class="draft">Стоянка</span></label><label><input type="radio" name="site">Куда нужнее</label></div>
+            </div>
+            <div class="field field--full"><label>Даты</label><div class="dates"><input class="input" type="date" aria-label="Приезд"><span class="muted">—</span><input class="input" type="date" aria-label="Отъезд"></div><span class="hint">От 7 до 40 дней. <a href="../season/#calendar">Посмотреть, когда свободнее</a></span></div>
+            <div class="field field--full"><label>Как добираетесь</label>
+              <div class="radios"><label><input type="radio" name="tr">Поезд</label><label><input type="radio" name="tr">Электричка</label><label><input type="radio" name="tr">Автобус</label><label><input type="radio" name="tr">Своя машина</label><label><input type="radio" name="tr">Ещё не знаю</label></div>
+            </div>
+            <div class="field"><label for="a-train">Поезд и время прибытия</label><input class="input" id="a-train" type="text"><span class="hint">Если уже знаете. Можно позже в чате</span></div>
+            <div class="field"><label for="a-seats">Могу подвезти на машине</label><input class="input" id="a-seats" type="number" placeholder="человек"></div>
+            <div class="field"><label class="check"><input type="checkbox" checked> Нужна встреча на станции</label></div>
+            <div class="field"><label class="check"><input type="checkbox"> Своя палатка и спальник</label></div>
+            <div class="field field--full"><label for="a-health">Ограничения по питанию или здоровью</label><textarea id="a-health"></textarea></div>
+            <div class="field field--full"><label for="a-q">Вопрос или комментарий</label><textarea id="a-q"></textarea></div>
+          </div>
+          <details class="more" style="margin-top: var(--sp-2)">
+            <summary class="link-more" style="cursor:pointer">Ещё о себе (необязательно)</summary>
+            <div class="form-grid" style="margin-top: var(--sp-4)">
+              <div class="field field--full"><label for="a-exp">Опыт раскопок</label><input class="input" id="a-exp" type="text"><span class="hint">Где и сколько сезонов</span></div>
+              <div class="field field--full"><label for="a-skills">Полезные навыки</label><input class="input" id="a-skills" type="text"><span class="hint">Готовка, вождение, фото, медицина</span></div>
+              <div class="field field--full"><label for="a-src">Откуда узнали об экспедиции</label><select id="a-src"><option>Группа ВКонтакте</option><option>goodsurfing</option><option>От знакомых</option><option>Поиск</option><option>Другое</option></select></div>
+            </div>
+          </details>
+          <label class="check" style="margin-top: var(--sp-2)"><input type="checkbox"> Согласен на обработку персональных данных (<a href="../privacy/">как мы их храним</a>)</label>
+        </fieldset>
+        <div class="form-foot">
+          <a class="link-more" href="./">← Назад</a>
+          <a class="btn btn--primary btn--lg" href="done.html">Отправить заявку</a>
+        </div>
+      </form>
+      <aside>
+        <div class="panel">
+          <h3>Что будет после</h3>
+          <ul class="progress">
+            <li class="is-now"><span class="dot"></span><div><b>Вы отправляете заявку</b><p>Даты, стоянка, как добираетесь.</p></div></li>
+            <li><span class="dot"></span><div><b>Руководитель подтверждает</b><p>Обычно в течение дня. Напишет в чат.</p></div></li>
+            <li><span class="dot"></span><div><b>Договариваетесь о встрече</b><p>Поезд, время, кто встретит.</p></div></li>
+            <li><span class="dot"></span><div><b>Приезжаете</b><p>Ваше имя появится в календаре заездов.</p></div></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

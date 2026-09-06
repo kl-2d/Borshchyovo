@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Календарь заездов — Админка</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="admin" data-user="С. Н. Лисицын">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Админка</h1><nav class="tabs" aria-label="Админка">
+<a href="index.html"><svg class="icon"><use href="#i-compass"/></svg>Сегодня</a>
+<a href="calendar.html" aria-current="page"><svg class="icon"><use href="#i-calendar"/></svg>Календарь</a>
+<a href="volunteers.html"><svg class="icon"><use href="#i-users"/></svg>Волонтёры</a>
+<a href="chat.html"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">5</span></a>
+<a href="news.html"><svg class="icon"><use href="#i-note"/></svg>Новости</a>
+<a href="gallery.html"><svg class="icon"><use href="#i-image"/></svg>Галерея</a>
+<a href="settings.html"><svg class="icon"><use href="#i-pin"/></svg>Сезон и стоянки</a>
+</nav></div></div>
+<div class="app"><div class="wrap">
+  <div class="toolbar">
+    <div class="filters" id="filters" style="margin:0"><a href="#" data-site="all" aria-current="true">Все стоянки</a><a href="#" data-site="b5">Борщёво-5</a><a href="#" data-site="k"><span class="draft">Стоянка</span></a></div>
+    <span class="grow"></span>
+    <span class="small">Сезон <span data-season-fact="range"></span> · <a href="settings.html">изменить даты</a></span>
+    <a class="btn btn--secondary btn--sm" href="#">Скачать таблицу (CSV)</a>
+  </div>
+  <div class="row row--between" style="margin-bottom: var(--sp-3)"><h2 style="margin:0">События сезона</h2><a class="btn btn--secondary btn--sm" href="#add-event">Добавить событие</a></div>
+  <ul class="events events--grid" id="events" style="margin-bottom: var(--sp-6)"></ul>
+  <div class="cal-layout cal-layout--tall">
+    <div>
+      <div class="cal" id="cal"></div>
+      <div class="cal-legend">
+        <span>Людей в лагере: <span class="scale"><i style="background:var(--occ-0)"></i><i style="background:var(--occ-1)"></i><i style="background:var(--occ-2)"></i><i style="background:var(--occ-3)"></i><i style="background:var(--occ-4)"></i></span>от никого до полного (<span data-season-fact="capacity"></span>)</span>
+        <span class="kinds">События: <span style="color:var(--ev-holiday)"><svg class="icon"><use href="#i-star"/></svg>праздник</span><span style="color:var(--ev-edu)"><svg class="icon"><use href="#i-book"/></svg>лекция, экскурсия</span><span style="color:var(--ev-guests)"><svg class="icon"><use href="#i-users"/></svg>гости, группы</span><span style="color:var(--ev-work)"><svg class="icon"><use href="#i-trowel"/></svg>работы лагеря</span></span>
+        <span><i style="background-image: repeating-linear-gradient(135deg, transparent 0 3px, rgba(26,39,51,.15) 3px 4px)"></i>выходной (воскресенье)</span>
+        <span><i style="box-shadow: inset 0 0 0 2px var(--ink)"></i>сегодня</span>
+      </div>
+      <p class="small" style="margin-top: var(--sp-4)">Нажмите на день: кто приезжает и уезжает, с каким транспортом и кого встречать. Имя ведёт в <a href="volunteer.html">карточку волонтёра</a>.</p>
+      <h2 style="margin-top: var(--sp-7)">Кто едет</h2>
+      <div class="people-list" id="people"></div>
+    </div>
+    <aside class="cal-side">
+      <div class="panel day-panel" id="day"></div>
+      <form class="panel" id="add-event" onsubmit="return false">
+        <h3 style="margin-bottom: var(--sp-3)">Добавить событие</h3>
+        <div class="field"><label for="ev-title">Название</label><input class="input" id="ev-title" type="text" placeholder="День археолога"></div>
+        <div class="field"><label for="ev-kind">Тип</label><select id="ev-kind"><option>Праздник</option><option>Лекция, экскурсия, музей</option><option>Гости, группы, пресса</option><option>Работы лагеря</option></select><span class="hint">Тип задаёт цвет в календаре</span></div>
+        <div class="field"><label>Даты</label><div class="dates"><input class="input" type="date" aria-label="Начало"><span class="muted">—</span><input class="input" type="date" aria-label="Конец"></div><span class="hint">Один день — оставьте вторую дату пустой</span></div>
+        <div class="field"><label for="ev-note">Пояснение</label><input class="input" id="ev-note" type="text" placeholder="Видно всем на сайте"></div>
+        <div class="field"><label class="check"><input type="checkbox" checked> Показывать волонтёрам</label></div>
+        <button class="btn btn--primary btn--block" type="submit">Добавить в календарь</button>
+      </form>
+    </aside>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+<script src="../assets/js/season.js"></script>
+<script>Season.render({ calendar: 'cal', panel: 'day', events: 'events', people: 'people', filters: 'filters', mode: 'admin' });</script>
+</body>
+</html>

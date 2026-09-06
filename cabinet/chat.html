@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Чат — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="cabinet" data-user="Имя">
+<main>
+<div class="app-bar"><div class="wrap"><h1>Кабинет</h1><nav class="tabs" aria-label="Кабинет">
+<a href="arrival.html"><svg class="icon"><use href="#i-calendar"/></svg>Мой заезд</a>
+<a href="profile.html"><svg class="icon"><use href="#i-users"/></svg>Карточка</a>
+<a href="chat.html" aria-current="page"><svg class="icon"><use href="#i-chat"/></svg>Чат <span class="badge">2</span></a>
+</nav></div></div>
+<div class="app"><div class="wrap wrap--narrow">
+  <div class="chat">
+    <div class="chat__list">
+      <a href="#" aria-current="true"><span class="avatar avatar--river">Э</span><div><b>Экспедиция</b><span>Руководитель: напишите номер поезда…</span></div><span class="badge" style="background:var(--ochre);border-radius:999px;padding:.1em .5em;font-size:.7rem;font-weight:600;color:var(--ink)">2</span></a>
+      <a href="#"><span class="avatar">С</span><div><b>Общий чат сезона</b><span>12 участников</span></div></a>
+    </div>
+    <div class="chat__thread">
+      <div class="chat__head"><span class="avatar avatar--river">Э</span><div><b>Экспедиция</b><br><span>Отвечает Лисицын С.Н., обычно в течение дня</span></div></div>
+      <div class="chat__msgs">
+        <div class="msg msg--sys">Заявка отправлена · <span class="draft">дата</span></div>
+        <div class="msg msg--them"><span class="draft">Сообщение руководителя: подтверждение дат</span><time class="draft">чч:мм</time></div>
+        <div class="msg msg--me"><span class="draft">Ответ волонтёра</span><time class="draft">чч:мм</time></div>
+        <div class="msg msg--them"><span class="draft">Вопрос руководителя про поезд и время прибытия</span><time class="draft">чч:мм</time></div>
+        <div class="msg msg--them"><span class="draft">Уточнение про встречу на станции</span><time class="draft">чч:мм</time></div>
+      </div>
+      <form class="chat__compose" onsubmit="return false">
+        <textarea aria-label="Сообщение" placeholder="Написать…"></textarea>
+        <button class="btn btn--primary" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div></div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>

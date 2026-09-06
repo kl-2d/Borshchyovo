@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Записаться: вход — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-root="../" data-page="apply">
+<main class="app">
+  <div class="wrap">
+    <div class="two" style="grid-template-columns: minmax(0,1fr) 20rem">
+      <div class="panel" style="padding: var(--sp-6)">
+        <h1 style="font-size: var(--t-2xl); margin-bottom: var(--sp-2)">Записаться в экспедицию</h1>
+        <p class="muted" style="margin-bottom: var(--sp-5)">Сначала вход: так заявка сразу станет вашим кабинетом с чатом и заездом.</p>
+        <ol class="stepper">
+          <li class="is-now">Вход</li>
+          <li>О себе</li>
+          <li>Заезд</li>
+        </ol>
+        <div class="auth-list" style="max-width: 26rem">
+          <a class="btn btn--vk btn--lg" href="./"><svg class="icon"><use href="#i-vk"/></svg>Продолжить через ВКонтакте</a>
+          <a class="btn btn--yandex btn--lg" href="./"><svg class="icon"><use href="#i-yandex"/></svg>Продолжить через Яндекс</a>
+        </div>
+        <div class="or" style="max-width: 26rem">или по почте</div>
+        <form onsubmit="return false" style="max-width: 26rem">
+          <div class="field"><label for="r-mail">Электронная почта</label><input class="input" id="r-mail" type="email"></div>
+          <div class="field"><label for="r-pass">Придумайте пароль</label><input class="input" id="r-pass" type="password"><span class="hint">Не меньше 8 символов</span></div>
+          <a class="btn btn--secondary btn--block" href="./">Продолжить</a>
+        </form>
+        <p class="small" style="margin-top: var(--sp-5)">Уже есть кабинет? <a href="../cabinet/">Войти</a></p>
+      </div>
+      <aside>
+        <div class="panel">
+          <h3>Зачем вход</h3>
+          <p class="small">Чтобы вы могли менять даты, писать руководителю и видеть статус заявки. Никаких рассылок.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<script src="../assets/js/chrome.js"></script>
+</body>
+</html>
