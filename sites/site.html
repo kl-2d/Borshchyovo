@@ -9,9 +9,9 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css?v=10">
-<link rel="stylesheet" href="../assets/css/tokens.css?v=10">
-<link rel="stylesheet" href="../assets/css/site.css?v=10">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=11">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=11">
+<link rel="stylesheet" href="../assets/css/site.css?v=11">
 </head>
 <body data-root="../" data-page="sites">
 <main>
@@ -68,8 +68,8 @@
     </div>
   </div></section>
 </main>
-<script src="../assets/js/chrome.js?v=10"></script>
-<script src="../assets/js/season.js?v=10"></script>
+<script src="../assets/js/chrome.js?v=11"></script>
+<script src="../assets/js/season.js?v=11"></script>
 <script>
 Season.render({});
 (function () { const photo = document.querySelector('.event__photo'), card = document.querySelector('.ecard'); if (!photo || !card || !('ResizeObserver' in window)) return; const sync = () => { const wide = matchMedia('(min-width: 60rem)').matches; photo.style.height = wide ? card.offsetHeight + 'px' : ''; photo.style.aspectRatio = wide ? 'auto' : ''; }; new ResizeObserver(sync).observe(card); addEventListener('resize', sync); sync(); })();

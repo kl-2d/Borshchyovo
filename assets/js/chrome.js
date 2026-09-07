@@ -38,7 +38,7 @@
         <div class="brandline"><img src="${root}assets/brand/mark.svg" alt=""><span>Костёнки-Борщёво<br><span class="small" style="font-weight:400">археологическая экспедиция</span></span></div>
         <p class="draft">Одна строка: организация, с какого года, где</p>
         <div class="site-footer__social">
-          <a href="#" rel="noopener"><svg class="icon"><use href="#i-vk"/></svg>ВКонтакте</a>
+          <a href="https://vk.ru/vysokoeku" rel="noopener" target="_blank"><svg class="icon"><use href="#i-vk"/></svg>ВКонтакте</a>
           <a href="https://goodsurfing.org/ru/offers/5379" rel="noopener"><svg class="icon"><use href="#i-compass"/></svg>goodsurfing</a>
           <a href="${root}contacts/"><svg class="icon"><use href="#i-mail"/></svg>Написать</a>
         </div>
@@ -59,7 +59,7 @@
   body.insertAdjacentHTML('afterbegin', header);
   body.insertAdjacentHTML('beforeend', footer);
   // Sprite is fetched with a version so browsers pick up new icons without a hard reload.
-  const ASSET_V = '10';
+  const ASSET_V = '11';
   fetch(root + 'assets/icons.svg?v=' + ASSET_V).then(r => r.text()).then(svg => {
     body.insertAdjacentHTML('afterbegin', svg);
   }).catch(() => {});
