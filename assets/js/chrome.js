@@ -54,7 +54,7 @@
   body.insertAdjacentHTML('afterbegin', header);
   body.insertAdjacentHTML('beforeend', footer);
   // Sprite is fetched with a version so browsers pick up new icons without a hard reload.
-  const ASSET_V = '20';
+  const ASSET_V = '21';
   fetch(root + 'assets/icons.svg?v=' + ASSET_V).then(r => r.text()).then(svg => {
     body.insertAdjacentHTML('afterbegin', svg);
   }).catch(() => {});

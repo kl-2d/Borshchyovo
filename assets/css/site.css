@@ -63,10 +63,11 @@ small, .small { font-size: var(--t-s); color: var(--ink-2); }
 .brand__mark { width: 36px; height: 36px; border-radius: 8px; display: block; }
 .brand small { display: block; font: 400 var(--t-xs)/1.2 var(--font-text); color: var(--ink-2); margin-top: 3px; }
 .nav { display: flex; gap: var(--sp-1); margin-left: auto; }
-.nav a { color: var(--ink); text-decoration: none; font-size: var(--t-s); padding: .5em .7em; border-radius: var(--r-s); white-space: nowrap; }
+/* Nav items share the CTA's height; the current page is a soft wash, not a second solid button. */
+.nav a { display: inline-flex; align-items: center; min-height: 2.25rem; color: var(--ink); text-decoration: none; font-size: var(--t-s); padding: 0 .8em; border-radius: var(--r-s); white-space: nowrap; }
 .nav a:hover { background: var(--river-wash); color: var(--action); }
-.nav a[aria-current="page"] { background: var(--action); color: #fff; }
-.nav a[aria-current="page"]:hover { background: var(--action-2); color: #fff; }
+.nav a[aria-current="page"] { background: var(--river-wash); color: var(--action); font-weight: 600; box-shadow: inset 0 -2px 0 var(--action); }
+.nav a[aria-current="page"]:hover { background: var(--chalkblue-wash); }
 .nav .nav__mobile { display: none; color: var(--river); font-weight: 500; }
 .header-actions { display: flex; gap: var(--sp-2); align-items: center; }
 .nav-toggle { display: none; background: none; border: 1px solid var(--line-2); border-radius: var(--r-s); padding: .5em .8em; font: inherit; }
