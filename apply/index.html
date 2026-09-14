@@ -9,59 +9,130 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css?v=11">
-<link rel="stylesheet" href="../assets/css/tokens.css?v=11">
-<link rel="stylesheet" href="../assets/css/site.css?v=11">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=20">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=20">
+<link rel="stylesheet" href="../assets/css/site.css?v=20">
 </head>
 <body data-root="../" data-page="apply">
 <main class="app">
   <div class="wrap">
-    <div class="two" style="grid-template-columns: minmax(0,1fr) 20rem">
-      <form class="panel" onsubmit="return false" style="padding: var(--sp-6)">
-        <h1 style="font-size: var(--t-2xl); margin-bottom: var(--sp-2)">Записаться в экспедицию</h1>
-        <p class="muted" style="margin-bottom: var(--sp-5)">Пять минут. Черновик сохраняется сам — можно вернуться позже.</p>
-        <ol class="stepper">
-          <li class="is-done">Вход</li>
-          <li class="is-now">О себе</li>
-          <li>Заезд</li>
-        </ol>
+    <div class="two two--apply">
+      <form class="panel apply-form" onsubmit="return false" action="done.html">
+        <h1>Записаться в экспедицию</h1>
+        <p class="muted">Одна форма вместо переписки. Без регистрации, минут пять. Обязательны только четыре поля со звёздочкой, остальное — чтобы вас было проще встретить.</p>
 
-        <fieldset style="border:0;padding:0;margin:0">
-          <div class="form-grid">
-            <div class="field"><label for="a-name">Имя и фамилия</label><input class="input" id="a-name" type="text"></div>
-            <div class="field"><label for="a-year">Год рождения</label><input class="input" id="a-year" type="number" inputmode="numeric"><span class="hint">С 16 лет — с согласия родителей</span></div>
-            <div class="field"><label for="a-phone">Телефон</label><input class="input" id="a-phone" type="tel"><span class="hint">Видит только руководитель экспедиции</span></div>
-            <div class="field"><label for="a-alt">Запасной контакт</label><input class="input" id="a-alt" type="text"><span class="hint">Почта или VK, если телефон вне сети</span></div>
-            <div class="field field--full"><label for="a-city">Откуда едете</label><input class="input" id="a-city" type="text"><span class="hint">Город. Поможет найти попутчиков на тот же поезд</span></div>
+        <fieldset class="fs">
+          <legend><span class="fs__n">1</span>Кто вы</legend>
+          <div class="form-row">
+          <div class="field"><label for="a-name">Имя и фамилия <i class="req" aria-hidden="true">*</i></label><input class="input" id="a-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="a-month">Дата рождения</label>
+            <div class="birth">
+              <select id="a-month" name="birthMonth" autocomplete="bday-month" aria-label="Месяц"><option value="" selected disabled>месяц</option><option value="1">январь</option><option value="2">февраль</option><option value="3">март</option><option value="4">апрель</option><option value="5">май</option><option value="6">июнь</option><option value="7">июль</option><option value="8">август</option><option value="9">сентябрь</option><option value="10">октябрь</option><option value="11">ноябрь</option><option value="12">декабрь</option></select>
+              <input class="input" id="a-year" name="birthYear" type="text" inputmode="numeric" autocomplete="bday-year" pattern="(19|20)[0-9]{2}" maxlength="4" placeholder="год" aria-label="Год">
+            </div>
           </div>
-          <p class="small" style="margin: var(--sp-2) 0 0">Четыре поля — и достаточно. Опыт и навыки спросим на следующем шаге, они необязательны.</p>
+          </div>
+          <div class="field"><label for="a-city">Откуда едете</label><input class="input" id="a-city" name="city" type="text"><span class="hint">Город — подскажем дорогу и попутчиков</span></div>
         </fieldset>
 
+        <fieldset class="fs">
+          <legend><span class="fs__n">2</span>Как с вами связаться</legend>
+          <div class="form-row">
+          <div class="field"><label for="a-phone">Телефон <i class="req" aria-hidden="true">*</i></label><input class="input" id="a-phone" name="phone" type="tel" autocomplete="tel" required><span class="hint">Сюда придут подтверждение и напоминание. Видит только начальник экспедиции</span></div>
+          <div class="field"><label for="a-mail">Почта или ВКонтакте</label><input class="input" id="a-mail" name="email" type="text" placeholder="e-mail или ссылка на страницу"><span class="hint">Второй канал, если телефон вне сети</span></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fs" id="dates">
+          <legend><span class="fs__n">3</span>Даты и дорога</legend>
+          <div class="dates dates--apply">
+            <div class="field"><label for="a-from">Приезд <i class="req" aria-hidden="true">*</i></label><input class="input" id="a-from" name="from" type="date" required></div>
+            <div class="field"><label for="a-to">Отъезд <i class="req" aria-hidden="true">*</i></label><input class="input" id="a-to" name="to" type="date" required></div>
+          </div>
+          <p class="hint" id="dates-hint">Сезон <span data-season-fact="range"></span>, приезд и отъезд в любой день, <span data-season-fact="days"></span></p>
+          <div class="field" style="margin-top: var(--sp-4)"><label>Как добираетесь</label>
+            <div class="radios" id="transport">
+              <label><input type="radio" name="transport" value="rail" checked><svg class="icon"><use href="#i-train"/></svg>ЖД</label>
+              <label><input type="radio" name="transport" value="bus"><svg class="icon"><use href="#i-bus"/></svg>Автобус</label>
+              <label><input type="radio" name="transport" value="car"><svg class="icon"><use href="#i-car"/></svg>Машина</label>
+              <label><input type="radio" name="transport" value="other"><svg class="icon"><use href="#i-path"/></svg>Иное</label>
+              <label><input type="radio" name="transport" value="tbd">Ещё не знаю</label>
+            </div>
+            <span class="hint">ЖД — поезд или электричка до станции Колодезная. Иное — велосипед, мотоцикл, пешком: тут вы сами</span>
+          </div>
+          <div data-for="rail bus">
+            <div class="field"><label for="a-train">Номер поезда, электрички или рейса и время прибытия</label><input class="input" id="a-train" name="arrivalInfo" type="text"><span class="hint">Если ещё не знаете — допишете по ссылке из сообщения</span></div>
+            <label class="check"><input type="checkbox" name="meet" checked> Нужна встреча на станции</label>
+          </div>
+          <div data-for="car" hidden>
+            <div class="field"><label for="a-seats">Могу подвезти, свободных мест</label><input class="input" id="a-seats" style="max-width: 6rem" name="carSeats" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" placeholder="0"><span class="hint">Подберём попутчиков с той же датой</span></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fs">
+          <legend><span class="fs__n">4</span>О поездке</legend>
+          <div class="field"><label>Спальное место</label>
+            <div class="radios"><label><input type="radio" name="lodging" value="need" checked>Нужно спальное место</label><label><input type="radio" name="lodging" value="own">Своё спальное место</label></div>
+            <span class="hint"><a href="../volunteers/#camp">Что есть в лагере</a> и <a href="../volunteers/#pack">что взять с собой</a></span>
+          </div>
+          <div class="field"><label for="a-exp">Опыт раскопок и полезные навыки</label><input class="input" id="a-exp" name="experience" type="text" placeholder="нет / был там-то; водитель, повар, фото…"></div>
+          <div class="field"><label for="a-health">Здоровье, питание, аллергии</label><textarea id="a-health" name="health" rows="2"></textarea><span class="hint">По желанию. Чтобы правильно кормить и не рисковать на раскопе. Видит только начальник экспедиции</span></div>
+          <div id="health-consent" hidden>
+            <label class="check"><input type="checkbox" name="healthConsent" disabled> Разрешаю обработку сведений о здоровье, которые я указал выше, только для организации моего участия</label>
+            <span class="hint">Сведения о здоровье — особая категория персональных данных, на них нужно отдельное согласие</span>
+          </div>
+          <div class="field"><label for="a-q">Вопрос или комментарий</label><textarea id="a-q" name="comment" rows="2"></textarea></div>
+        </fieldset>
+
+        <div class="consent">
+          <label class="check"><input type="checkbox" name="consent" required> Согласен на обработку персональных данных по <a href="../privacy/">правилам</a> <i class="req" aria-hidden="true">*</i></label>
+          <div class="captcha draft">Место под Yandex SmartCaptcha</div>
+        </div>
+
         <div class="form-foot">
-          <a class="link-more" href="login.html">← Назад</a>
-          <a class="btn btn--primary" href="step3.html">Дальше: заезд</a>
+          <a class="btn btn--primary btn--lg" href="done.html">Отправить заявку</a>
+          <span class="small">Подтверждение придёт сразу на телефон</span>
         </div>
       </form>
 
-      <aside>
-        <div class="panel">
-          <h3>Что будет после</h3>
-          <ul class="progress">
-            <li class="is-now"><span class="dot"></span><div><b>Вы отправляете заявку</b><p>Даты, стоянка, как добираетесь.</p></div></li>
-            <li><span class="dot"></span><div><b>Руководитель подтверждает</b><p>Обычно в течение дня. Напишет в чат.</p></div></li>
-            <li><span class="dot"></span><div><b>Договариваетесь о встрече</b><p>Поезд, время, кто встретит.</p></div></li>
-            <li><span class="dot"></span><div><b>Приезжаете</b><p>Ваше имя появится в календаре заездов.</p></div></li>
+      <aside class="apply-side">
+        <div class="panel" id="contacts">
+          <h3>Спросить до записи</h3>
+          <ul class="contact-list">
+            <li><svg class="icon"><use href="#i-phone"/></svg><div><b>Телефон</b><span class="draft">номер экспедиции, часы</span></div></li>
+            <li><svg class="icon"><use href="#i-mail"/></svg><div><b>Электронная почта</b><span class="draft">адрес экспедиции</span></div></li>
+            <li><svg class="icon"><use href="#i-vk"/></svg><div><b>Группа ВКонтакте</b><span><a href="https://vk.ru/vysokoeku" rel="noopener" target="_blank">vk.ru/vysokoeku</a></span></div></li>
           </ul>
         </div>
         <div class="panel">
-          <h3>Ещё не решили?</h3>
-          <p class="small" style="margin-bottom: var(--sp-3)">Условия, быт, что взять и кому не стоит ехать.</p>
-          <a class="link-more" href="../volunteers/">Всё для волонтёра</a>
+          <h3>Что будет после</h3>
+          <ol class="after">
+            <li><svg class="icon"><use href="#i-check"/></svg><div><b>Подтверждение сразу</b><span>С датами и ссылкой «изменить или отменить»</span></div></li>
+            <li><svg class="icon"><use href="#i-bell"/></svg><div><b>Напоминание перед приездом</b><span>За несколько дней, с телефоном встречающего</span></div></li>
+            <li><svg class="icon"><use href="#i-handshake"/></svg><div><b>Встреча на станции</b><span>Как договориться — на странице <a href="../getting-there/">«Как добраться»</a></span></div></li>
+          </ol>
         </div>
       </aside>
     </div>
   </div>
 </main>
-<script src="../assets/js/chrome.js?v=11"></script>
+<script src="../assets/js/chrome.js?v=20"></script>
+<script src="../assets/js/season.js?v=20"></script>
+<script>
+Season.render({ dates: { from: 'a-from', to: 'a-to', hint: 'dates-hint' } });
+// Transport-dependent fields: rail/bus ask for the arrival and a meeting, car offers seats, the rest nothing.
+(function () {
+  const radios = [...document.querySelectorAll('#transport input')];
+  const blocks = [...document.querySelectorAll('[data-for]')];
+  const apply = () => { const v = radios.find(r => r.checked).value; blocks.forEach(b => { const on = b.dataset.for.split(' ').includes(v); b.hidden = !on; b.querySelectorAll('input').forEach(i => { i.disabled = !on; }); }); };
+  radios.forEach(r => r.addEventListener('change', apply)); apply();
+})();
+// Health notes are special-category personal data (152-ФЗ art. 10): a separate consent appears only when the field is used.
+(function () {
+  const t = document.getElementById('a-health'), box = document.getElementById('health-consent'), cb = box.querySelector('input');
+  const sync = () => { const on = t.value.trim().length > 0; box.hidden = !on; cb.disabled = !on; cb.required = on; };
+  t.addEventListener('input', sync); sync();
+})();
+</script>
 </body>
 </html>

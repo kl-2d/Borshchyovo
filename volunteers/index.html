@@ -9,9 +9,9 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css?v=11">
-<link rel="stylesheet" href="../assets/css/tokens.css?v=11">
-<link rel="stylesheet" href="../assets/css/site.css?v=11">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=20">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=20">
+<link rel="stylesheet" href="../assets/css/site.css?v=20">
 </head>
 <body data-root="../" data-page="volunteers">
 
@@ -27,44 +27,62 @@
   <div class="wrap article">
     <nav class="toc" aria-label="На этой странице">
       <ul>
-        <li><a href="#how">Как это устроено</a></li>
         <li><a href="#fit">Кому подходит</a></li>
+        <li><a href="#terms">Сроки участия</a></li>
         <li><a href="#work">Работа</a></li>
         <li><a href="#day">Распорядок дня</a></li>
         <li><a href="#camp">Жильё и быт</a></li>
         <li><a href="#food">Еда</a></li>
         <li><a href="#pack">Что взять</a></li>
-        <li><a href="#money">Деньги</a></li>
-        <li><a href="#health">Здоровье и безопасность</a></li>
+        <li><a href="#health">Здоровье</a></li>
         <li><a href="#rules">Правила лагеря</a></li>
         <li><a href="#not">Кому не стоит ехать</a></li>
         <li><a href="#faq">Вопросы</a></li>
-        <li><a href="../apply/login.html">Записаться</a></li>
+        <li><a href="../apply/">Записаться</a></li>
       </ul>
     </nav>
 
     <div class="article__body">
-      <div class="plate"><div><b>Сезон ГГГГ</b><br><span class="small">Раскопки идут с <span data-season-fact="range"></span>, приезд в любой день на срок <span data-season-fact="days"></span></span></div><a class="btn btn--primary" href="../apply/login.html">Записаться</a></div>
+      <div class="plate"><div><b>Сезон ГГГГ</b><br><span class="small">Раскопки идут с <span data-season-fact="range"></span>, приезд в любой день на срок <span data-season-fact="days"></span></span></div><a class="btn btn--primary" href="../apply/">Записаться</a></div>
+
       <section id="fit" style="padding-top: 0">
         <h2><svg class="icon"><use href="#i-binoculars"/></svg>Кому подходит</h2>
+        <p class="small draft" style="margin-bottom: var(--sp-4)">Кого ждём и что требуем: возраст, форма, опыт не нужен — и три честные причины ехать</p>
         <div class="split split--text-first">
           <div class="prose">
-            <p class="draft">Описание: возраст, опыт, физическая форма</p>
-            <p class="draft">Описание: кому здесь понравится</p>
+            <p class="draft">Абзац: кому здесь понравится, чего ждать от работы и людей</p>
+            <p class="draft">Абзац: кого ждём — возраст, физическая форма, отношение к быту</p>
           </div>
           <ul class="checklist" style="grid-template-columns: 1fr">
-            <li><svg class="icon"><use href="#i-check"/></svg><span class="draft">Условие</span></li>
-            <li><svg class="icon"><use href="#i-check"/></svg><span class="draft">Условие</span></li>
-            <li><svg class="icon"><use href="#i-check"/></svg><span class="draft">Условие</span></li>
-            <li><svg class="icon"><use href="#i-check"/></svg><span class="draft">Условие</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span class="draft">Требование к волонтёру</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span class="draft">Требование к волонтёру</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span class="draft">Требование к волонтёру</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span class="draft">Требование к волонтёру</span></li>
           </ul>
         </div>
+        <div class="reasons" style="margin-top: var(--sp-6)">
+          <div class="reason"><div class="photo"><span class="photo__cap">Фото: работа в слое</span></div><h3 class="draft">Причина ехать</h3><p class="draft">Настоящая наука своими руками</p></div>
+          <div class="reason"><div class="photo"><span class="photo__cap">Фото: Дон, лагерь</span></div><h3 class="draft">Причина ехать</h3><p class="draft">Место и быт, честно</p></div>
+          <div class="reason"><div class="photo"><span class="photo__cap">Фото: люди у костра</span></div><h3 class="draft">Причина ехать</h3><p class="draft">Люди и что остаётся после</p></div>
+        </div>
       </section>
+
+      <section id="terms">
+        <h2><svg class="icon"><use href="#i-calendar"/></svg>Сроки участия</h2>
+        <p class="small draft" style="margin-bottom: var(--sp-4)">Минимальный и максимальный срок, границы сезона, что с выходными — цифры берутся из настроек сезона</p>
+        <ul class="meta meta--lined" style="max-width: 40rem">
+          <li><svg class="icon"><use href="#i-clock"/></svg><div><b data-season-fact="days"></b><span>минимальный срок — чтобы успеть научиться и принести пользу; максимальный — чтобы отдохнуть</span></div></li>
+          <li><svg class="icon"><use href="#i-calendar"/></svg><div><b data-season-fact="range"></b><span>сезон; приезд и отъезд в любой день, смен нет</span></div></li>
+          <li><svg class="icon"><use href="#i-sun"/></svg><div><b>Выходной — воскресенье</b><span class="draft">что делаем в выходной, можно ли уехать на день</span></div></li>
+          <li><svg class="icon"><use href="#i-tent"/></svg><div><b data-season-fact="capacity"></b><span>вместимость лагеря; когда мест нет — лист ожидания</span></div></li>
+        </ul>
+      </section>
+
       <section id="work">
         <h2><svg class="icon"><use href="#i-trowel"/></svg>Что вы будете делать</h2>
         <div class="prose">
-          <p class="draft">Описание работ на раскопе</p>
-          <p class="draft">Описание работ в лагере и с находками</p>
+          <p class="draft">Описание работ на раскопе: слой, зачистка, фиксация</p>
+          <p class="draft">Описание работ в лагере и с находками: промывка, камералка, дежурства</p>
         </div>
         <div class="cols-3" style="margin-top: var(--sp-5)">
           <div class="photo"><span class="photo__cap">Фото: раскоп</span></div>
@@ -83,52 +101,77 @@
           <li class="is-work"><time class="draft">чч:мм</time><svg class="icon"><use href="#i-trowel"/></svg><b>Работа после обеда</b><p class="draft">Описание</p></li>
           <li class="is-rest"><time class="draft">чч:мм</time><svg class="icon"><use href="#i-moon"/></svg><b>Ужин, свободный вечер</b><p class="draft">Описание: лекции, костёр, дежурство</p></li>
         </ol>
-        <p class="small" style="margin-top: var(--sp-4)">Выходной — воскресенье. <span class="draft">Уточнение про выходные</span></p>
       </section>
 
       <section id="camp">
         <h2><svg class="icon"><use href="#i-campfire"/></svg>Жильё и быт</h2>
-        <div class="split split--text-first">
-          <div class="prose">
-            <p class="draft">Описание жилья: палатки, вагончики, где спать</p>
-            <p class="draft">Описание быта: вода, душ, электричество, связь</p>
+        <p class="small draft" style="margin-bottom: var(--sp-4)">Нужно ли спальное место от лагеря или своё, и что есть в лагере: от этого зависит список вещей ниже</p>
+        <div class="lodging">
+          <div class="lodging__card"><svg class="icon"><use href="#i-bed"/></svg><div><b>Нужно спальное место</b><p class="draft">Что даёт лагерь: палатка, место в домике или ещё что — и как об этом попросить в форме записи</p></div></div>
+          <div class="lodging__card"><svg class="icon"><use href="#i-tent"/></svg><div><b>Своё спальное место</b><p class="draft">Своя палатка, снятый домик в селе, машина — любой вариант; что при этом нужно от лагеря</p></div></div>
+        </div>
+        <div class="split split--text-first" style="margin-top: var(--sp-6)">
+          <ul class="meta meta--lined">
+            <li><svg class="icon"><use href="#i-water"/></svg><div><b>Вода и душ</b><span class="draft">откуда вода, есть ли душ, как часто</span></div></li>
+            <li><svg class="icon"><use href="#i-bolt"/></svg><div><b>Электричество</b><span class="draft">где зарядить телефон, есть ли генератор</span></div></li>
+            <li><svg class="icon"><use href="#i-wifi"/></svg><div><b>Связь</b><span class="draft">какие операторы ловят, где в лагере</span></div></li>
+            <li><svg class="icon"><use href="#i-home"/></svg><div><b>Туалет, кухня, общие места</b><span class="draft">что есть, что по очереди</span></div></li>
+          </ul>
+          <div class="video video--wide">
+            <div class="photo photo--wide"><span class="photo__cap">Постер: прогулка по лагерю</span></div>
+            <button type="button" class="video__play" aria-label="Смотреть"><svg class="icon"><use href="#i-arrow"/></svg></button>
+            <div class="video__cap"><b>Прогулка по лагерю</b><span class="small draft">1–2 минуты · ВК Видео</span></div>
           </div>
-          <div class="photo"><span class="photo__cap">Фото: лагерь</span></div>
         </div>
       </section>
 
       <section id="food">
         <h2><svg class="icon"><use href="#i-food"/></svg>Еда</h2>
         <div class="prose">
-          <p class="draft">Описание питания и дежурств по кухне</p>
-          <p class="draft">Описание про особые диеты</p>
+          <p class="draft">Описание питания: кто готовит, сколько раз в день, дежурства по кухне</p>
+          <p class="draft">Про особые диеты и аллергии — что реально можем учесть, а что нет</p>
         </div>
       </section>
 
       <section id="pack">
         <h2><svg class="icon"><use href="#i-bag"/></svg>Что взять с собой</h2>
-        <div class="packs">
-          <div class="pack"><h4><svg class="icon"><use href="#i-tent"/></svg>Жить</h4><ul><li class="is-must"><span class="draft">Обязательный пункт</span></li><li class="is-must"><span class="draft">Обязательный пункт</span></li><li><span class="draft">Пункт</span></li><li><span class="draft">Пункт</span></li></ul></div>
-          <div class="pack"><h4><svg class="icon"><use href="#i-trowel"/></svg>Работать</h4><ul><li class="is-must"><span class="draft">Обязательный пункт</span></li><li><span class="draft">Пункт</span></li><li><span class="draft">Пункт</span></li></ul></div>
-          <div class="pack"><h4><svg class="icon"><use href="#i-aid"/></svg>Здоровье и документы</h4><ul><li class="is-must"><span class="draft">Обязательный пункт</span></li><li class="is-must"><span class="draft">Обязательный пункт</span></li><li><span class="draft">Пункт</span></li></ul></div>
+        <p class="small draft" style="margin-bottom: var(--sp-4)">Список зависит от того, своё ли у вас спальное место: со своим добавляется всё для ночлега</p>
+        <div class="rtabs" role="tablist" aria-label="Спальное место">
+          <button role="tab" aria-selected="true" aria-controls="p-camp"><svg class="icon"><use href="#i-bed"/></svg>Нужно спальное место</button>
+          <button role="tab" aria-selected="false" aria-controls="p-own"><svg class="icon"><use href="#i-tent"/></svg>Своё спальное место</button>
         </div>
-        <p class="small" style="margin-top: var(--sp-3)">Синяя рамка — обязательно. Список можно <a href="#">скачать и распечатать</a>.</p>
-      </section>
-
-      <section id="money">
-        <h2><svg class="icon"><use href="#i-money"/></svg>Деньги</h2>
-        <div class="money">
-          <div class="free"><h4>Бесплатно</h4><ul><li class="draft">Пункт</li><li class="draft">Пункт</li><li class="draft">Пункт</li></ul></div>
-          <div class="paid"><h4>За свой счёт</h4><ul><li class="draft">Пункт</li><li class="draft">Пункт</li></ul></div>
+        <div class="rpanel" id="p-own" role="tabpanel">
+          <div class="packs">
+            <div class="pack"><h4><svg class="icon"><use href="#i-tent"/></svg>Ночлег</h4><ul><li class="is-must">Палатка</li><li class="is-must">Спальник</li><li class="is-must">Коврик</li><li><span class="draft">Пункт</span></li></ul></div>
+            <div class="pack"><h4><svg class="icon"><use href="#i-trowel"/></svg>Работа</h4><ul><li class="is-must"><span class="draft">Обязательный пункт</span></li><li><span class="draft">Пункт</span></li><li><span class="draft">Пункт</span></li></ul></div>
+            <div class="pack"><h4><svg class="icon"><use href="#i-aid"/></svg>Здоровье и документы</h4><ul><li class="is-must">Паспорт</li><li class="is-must"><span class="draft">Обязательный пункт</span></li><li><span class="draft">Пункт</span></li></ul></div>
+          </div>
         </div>
+        <div class="rpanel is-open" id="p-camp" role="tabpanel">
+          <div class="packs">
+            <div class="pack"><h4><svg class="icon"><use href="#i-bed"/></svg>Ночлег</h4><ul><li class="is-must">Спальник</li><li><span class="draft">Что уже есть на месте от лагеря</span></li><li><span class="draft">Пункт</span></li></ul></div>
+            <div class="pack"><h4><svg class="icon"><use href="#i-trowel"/></svg>Работа</h4><ul><li class="is-must"><span class="draft">Обязательный пункт</span></li><li><span class="draft">Пункт</span></li><li><span class="draft">Пункт</span></li></ul></div>
+            <div class="pack"><h4><svg class="icon"><use href="#i-aid"/></svg>Здоровье и документы</h4><ul><li class="is-must">Паспорт</li><li class="is-must"><span class="draft">Обязательный пункт</span></li><li><span class="draft">Пункт</span></li></ul></div>
+          </div>
+        </div>
+        <p class="small" style="margin-top: var(--sp-3)">Синяя рамка — обязательно.</p>
       </section>
 
       <section id="health">
-        <h2><svg class="icon"><use href="#i-aid"/></svg>Здоровье и безопасность</h2>
-        <div class="prose">
-          <p class="draft">Описание: аптечка, ближайшая больница, жара и солнце, клещи</p>
-          <p class="draft">Описание: что сообщить о себе заранее</p>
+        <h2><svg class="icon"><use href="#i-aid"/></svg>Здоровье, ограничения, аллергии</h2>
+        <p class="small draft" style="margin-bottom: var(--sp-4)">Что важно рассказать о себе заранее и на что рассчитывать на месте</p>
+        <div class="split split--text-first" style="align-items:start">
+          <div class="prose">
+            <p class="draft">Абзац: жара, солнце, физическая нагрузка — кому стоит подумать</p>
+            <p class="draft">Абзац: аллергии и питание — что учитываем, о чём просим написать в форме</p>
+          </div>
+          <ul class="meta meta--lined">
+            <li><svg class="icon"><use href="#i-aid"/></svg><div><b>Аптечка лагеря</b><span class="draft">что есть, что везти своё</span></div></li>
+            <li><svg class="icon"><use href="#i-pin"/></svg><div><b>Ближайшая медицина</b><span class="draft">где, сколько ехать</span></div></li>
+            <li><svg class="icon"><use href="#i-warn"/></svg><div><b>Клещи, солнце, вода</b><span class="draft">простые правила безопасности</span></div></li>
+          </ul>
         </div>
+        <div class="callout" style="margin-top: var(--sp-5)"><svg class="icon" style="color: var(--river)"><use href="#i-info"/></svg><p>Ограничения по здоровью, питанию и аллергии — отдельное поле в <a href="../apply/">форме записи</a>. Его видит только начальник экспедиции.</p></div>
       </section>
 
       <section id="rules">
@@ -145,31 +188,46 @@
         <h2><svg class="icon"><use href="#i-suitcase"/></svg>Кому не стоит ехать</h2>
         <div class="callout callout--warn">
           <svg class="icon"><use href="#i-note"/></svg>
-          <p class="draft">Честное описание ограничений: здоровье, возраст, ожидания</p>
+          <p class="draft">Честное описание ограничений: здоровье, возраст, ожидания от «отдыха»</p>
         </div>
       </section>
 
       <section id="faq">
         <h2><svg class="icon"><use href="#i-notebook"/></svg>Частые вопросы</h2>
+        <h3 style="margin: 0 0 var(--sp-2); font-size: var(--t-m)">Об участии</h3>
         <div class="faq">
-          <details><summary class="draft">Вопрос 1</summary><p class="draft">Ответ</p></details>
-          <details><summary class="draft">Вопрос 2</summary><p class="draft">Ответ</p></details>
-          <details><summary class="draft">Вопрос 3</summary><p class="draft">Ответ</p></details>
-          <details><summary class="draft">Вопрос 4</summary><p class="draft">Ответ</p></details>
+          <details><summary class="draft">Вопрос про опыт и возраст</summary><p class="draft">Ответ</p></details>
+          <details><summary class="draft">Вопрос про сроки и даты</summary><p class="draft">Ответ</p></details>
+          <details><summary class="draft">Вопрос про физическую нагрузку</summary><p class="draft">Ответ</p></details>
+        </div>
+        <h3 style="margin: var(--sp-6) 0 var(--sp-2); font-size: var(--t-m)">О быте и дороге</h3>
+        <div class="faq">
+          <details><summary class="draft">Вопрос про быт и жильё</summary><p class="draft">Ответ</p></details>
+          <details><summary class="draft">Вопрос про еду и диеты</summary><p class="draft">Ответ</p></details>
+          <details><summary class="draft">Вопрос про дорогу и встречу</summary><p class="draft">Ответ</p></details>
+          <details><summary class="draft">Вопрос про связь и выходные</summary><p class="draft">Ответ</p></details>
         </div>
       </section>
 
       <section id="apply">
         <h2><svg class="icon"><use href="#i-ticket"/></svg>Готовы ехать?</h2>
-        <p class="lede" style="margin-bottom: var(--sp-5)">Заявка занимает пять минут. После неё у вас появится кабинет: заезд, чат с руководителем, дорога.</p>
-        <div class="actions"><a class="btn btn--primary btn--lg" href="../apply/login.html">Записаться</a><a class="link-more" href="../season/">Сначала посмотреть даты</a></div>
+        <p class="lede" style="margin-bottom: var(--sp-5)">Заявка занимает пять минут. Подтверждение придёт сразу, напоминание — перед приездом.</p>
+        <div class="actions"><a class="btn btn--primary btn--lg" href="../apply/">Записаться</a><a class="link-more" href="../getting-there/">Как добраться</a></div>
       </section>
     </div>
   </div>
 </main>
 
-<script src="../assets/js/chrome.js?v=11"></script>
-<script src="../assets/js/season.js?v=11"></script>
+<script src="../assets/js/chrome.js?v=20"></script>
+<script src="../assets/js/season.js?v=20"></script>
+<script>
+// Pack list tabs: one lodging variant at a time.
+(function () {
+  const tabs = [...document.querySelectorAll('#pack [role="tab"]')];
+  const show = id => { tabs.forEach(t => t.setAttribute('aria-selected', String(t.getAttribute('aria-controls') === id))); document.querySelectorAll('#pack .rpanel').forEach(p => p.classList.toggle('is-open', p.id === id)); };
+  tabs.forEach(t => t.addEventListener('click', () => show(t.getAttribute('aria-controls'))));
+})();
+</script>
 <script>Season.render({});</script>
 </body>
 </html>

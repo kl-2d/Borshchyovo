@@ -4,13 +4,11 @@
   const body = document.body;
   const root = body.dataset.root || '';
   const here = body.dataset.page || '';
-  const user = body.dataset.user || ''; // logged-in state for cabinet/admin mockups
+  // v3 map (docs/ux.md): four sections + one action; no login, no user state.
   const nav = [
     ['volunteers', 'Волонтёрам'],
-    ['sites', 'Стоянки'],
-    ['season', 'Сезон'],
+    ['leisure', 'Досуг'],
     ['getting-there', 'Как добраться'],
-    ['news', 'Новости'],
     ['about', 'Об экспедиции'],
   ];
   const links = nav.map(([slug, label]) =>
@@ -23,11 +21,8 @@
       <span>Костёнки-Борщёво<small>археологическая экспедиция</small></span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Меню</button>
-    <nav class="nav" id="nav" aria-label="Разделы">${links}<a class="nav__mobile" href="${root}gallery/">Галерея</a><a class="nav__mobile" href="${root}contacts/">Контакты</a><a class="nav__mobile" href="${root}cabinet/">Войти</a><a class="nav__mobile" href="${root}apply/login.html">Записаться</a></nav>
-    <div class="header-actions">${user
-      ? `<a class="btn btn--secondary btn--sm" href="${root}cabinet/arrival.html"><span class="avatar" style="width:1.4rem;height:1.4rem">${user[0]}</span>${user}</a>`
-      : `<a class="btn btn--secondary btn--sm" href="${root}cabinet/">Войти</a><a class="btn btn--primary btn--sm" href="${root}apply/login.html">Записаться</a>`}
-    </div>
+    <nav class="nav" id="nav" aria-label="Разделы">${links}<a class="nav__mobile" href="${root}apply/">Записаться</a></nav>
+    <div class="header-actions"><a class="btn btn--primary btn--sm" href="${root}apply/">Записаться</a></div>
   </div>
 </header>`;
   const footer = `
@@ -40,12 +35,12 @@
         <div class="site-footer__social">
           <a href="https://vk.ru/vysokoeku" rel="noopener" target="_blank"><svg class="icon"><use href="#i-vk"/></svg>ВКонтакте</a>
           <a href="https://goodsurfing.org/ru/offers/5379" rel="noopener"><svg class="icon"><use href="#i-compass"/></svg>goodsurfing</a>
-          <a href="${root}contacts/"><svg class="icon"><use href="#i-mail"/></svg>Написать</a>
+          <a href="${root}apply/#contacts"><svg class="icon"><use href="#i-mail"/></svg>Написать</a>
         </div>
       </div>
-      <div class="site-footer__col"><h4>Волонтёру</h4><ul><li><a href="${root}volunteers/">Справочник</a></li><li><a href="${root}season/">Сезон и календарь</a></li><li><a href="${root}getting-there/">Как добраться</a></li><li><a href="${root}apply/login.html">Записаться</a></li><li><a href="${root}cabinet/">Кабинет</a></li></ul></div>
-      <div class="site-footer__col"><h4>Экспедиция</h4><ul><li><a href="${root}about/">Об экспедиции</a></li><li><a href="${root}sites/">Стоянки</a></li><li><a href="${root}lisitsyn/">Руководитель</a></li><li><a href="${root}news/">Новости</a></li><li><a href="${root}gallery/">Галерея</a></li><li><a href="${root}reviews/">Отзывы</a></li></ul></div>
-      <div class="site-footer__col"><h4>Документы</h4><ul><li><a href="${root}privacy/">Персональные данные</a></li><li><a href="#" class="draft">Правила лагеря</a></li><li><a href="#" class="draft">Открытый лист</a></li><li><a href="${root}contacts/">Для прессы</a></li><li><a href="${root}admin/">Админка</a></li></ul></div>
+      <div class="site-footer__col"><h4>Волонтёру</h4><ul><li><a href="${root}volunteers/">Справочник</a></li><li><a href="${root}leisure/">Досуг</a></li><li><a href="${root}getting-there/">Как добраться</a></li><li><a href="${root}apply/">Записаться</a></li></ul></div>
+      <div class="site-footer__col"><h4>Экспедиция</h4><ul><li><a href="${root}about/">Об экспедиции</a></li><li><a href="${root}about/#sites">Стоянки</a></li><li><a href="${root}about/#leader">Начальник экспедиции</a></li><li><a href="${root}about/#photos">Фото и видео</a></li><li><a href="https://vk.ru/vysokoeku" rel="noopener" target="_blank">Новости в группе ВК</a></li></ul></div>
+      <div class="site-footer__col"><h4>Документы</h4><ul><li><a href="${root}privacy/">Персональные данные</a></li><li><a href="${root}volunteers/#rules">Правила лагеря</a></li><li><a href="#" class="draft">Открытый лист</a></li><li><a href="${root}about/#press">Для прессы</a></li></ul></div>
     </div>
     <div class="site-footer__bottom">
       <div class="small">© Археологическая экспедиция Костёнки-Борщёво, ГГГГ</div>
@@ -59,7 +54,7 @@
   body.insertAdjacentHTML('afterbegin', header);
   body.insertAdjacentHTML('beforeend', footer);
   // Sprite is fetched with a version so browsers pick up new icons without a hard reload.
-  const ASSET_V = '11';
+  const ASSET_V = '20';
   fetch(root + 'assets/icons.svg?v=' + ASSET_V).then(r => r.text()).then(svg => {
     body.insertAdjacentHTML('afterbegin', svg);
   }).catch(() => {});
@@ -123,7 +118,7 @@
   if (hero && 'IntersectionObserver' in window) {
     const bar = document.createElement('div');
     bar.className = 'stickycta';
-    bar.innerHTML = `<a class="btn btn--primary btn--block" href="${root}apply/login.html">Записаться в экспедицию</a>`;
+    bar.innerHTML = `<a class="btn btn--primary btn--block" href="${root}apply/">Записаться в экспедицию</a>`;
     body.appendChild(bar);
     body.classList.add('has-stickycta');
     new IntersectionObserver(([e]) => bar.classList.toggle('is-visible', !e.isIntersecting), { threshold: 0.05 }).observe(hero);

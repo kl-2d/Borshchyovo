@@ -9,46 +9,92 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css?v=11">
-<link rel="stylesheet" href="../assets/css/tokens.css?v=11">
-<link rel="stylesheet" href="../assets/css/site.css?v=11">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=20">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=20">
+<link rel="stylesheet" href="../assets/css/site.css?v=20">
 </head>
 <body data-root="../" data-page="getting-there">
 <main>
-<div class="page-head"><div class="wrap"><div class="crumbs"><a href="../">Главная</a> / Как добраться</div><h1>Как добраться</h1><p class="lede">Лагерь стоит в селе Борщёво на Дону, Хохольский район Воронежской области. Ниже — все способы доехать и как мы встречаем.</p></div></div>
+<div class="page-head"><div class="wrap"><div class="crumbs"><a href="../">Главная</a> / Как добраться</div><h1>Как добраться</h1><p class="lede">База экспедиции — село Борщёво на Дону, Хохольский район Воронежской области. Ближайшая станция для электричек — Колодезная, оттуда забираем на машине.</p></div></div>
+
 <section class="section section--tight"><div class="wrap">
-  <div class="map" role="img" aria-label="Карта: лагерь экспедиции">
-    <svg class="map__river" viewBox="0 0 840 360" preserveAspectRatio="none" aria-hidden="true"><path d="M0 250 C120 230 180 300 300 270 S480 180 600 210 760 260 840 220" fill="none" stroke="#9fb9c6" stroke-width="18" stroke-linecap="round"/></svg>
-    <span class="map__pin"><svg class="icon"><use href="#i-pin"/></svg></span>
-    <span class="photo__cap">Яндекс.Карта с точкой лагеря и кнопкой «Маршрут»</span>
+  <div class="gmap">
+    <iframe src="https://yandex.ru/map-widget/v1/?ll=39.212%2C51.345&z=12&pt=39.124963%2C51.339044%2Cpm2rdm~39.299037%2C51.351602%2Cpm2blm" width="100%" height="100%" frameborder="0" allowfullscreen loading="lazy" title="Карта: база экспедиции и станция Колодезная"></iframe>
+  </div>
+  <div class="points">
+    <div class="point point--base">
+      <svg class="icon"><use href="#i-tent"/></svg>
+      <div>
+        <b>База экспедиции</b>
+        <span>с. Борщёво · <code>51.339044, 39.124963</code></span>
+        <span class="point__links"><a href="https://yandex.ru/maps/-/CTtD6TiD" rel="noopener" target="_blank">Открыть на карте</a> · <a href="https://yandex.ru/maps/?rtext=~51.339044,39.124963&rtt=auto" rel="noopener" target="_blank">Маршрут на машине</a></span>
+      </div>
+    </div>
+    <div class="point point--station">
+      <svg class="icon"><use href="#i-train"/></svg>
+      <div>
+        <b>Станция Колодезная</b>
+        <span>сюда приходят электрички, отсюда забираем · <code>51.351602, 39.299037</code></span>
+        <span class="point__links"><a href="https://yandex.ru/maps/-/CTtDbOzt" rel="noopener" target="_blank">Открыть на карте</a> · <span class="draft">до базы ~15 км, минут 20 на машине</span></span>
+      </div>
+    </div>
   </div>
 </div></section>
-<section class="section section--tight" style="padding-top:0"><div class="wrap"><div class="narrow">
+
+<section class="section section--tight" id="routes" style="padding-top:0"><div class="wrap"><div class="narrow">
   <h2>Как доехать</h2>
+  <p class="small draft" style="margin-bottom: var(--sp-4)">Один способ на вкладку: откуда, чем, сколько времени и денег, где выходить</p>
   <div class="rtabs" role="tablist" aria-label="Транспорт">
-    <button role="tab" aria-selected="true" aria-controls="r-train"><svg class="icon"><use href="#i-train"/></svg>Поездом</button>
+    <button role="tab" aria-selected="true" aria-controls="r-train"><svg class="icon"><use href="#i-train"/></svg>Поездом до Воронежа</button>
     <button role="tab" aria-selected="false" aria-controls="r-local"><svg class="icon"><use href="#i-train"/></svg>Электричкой</button>
-    <button role="tab" aria-selected="false" aria-controls="r-bus"><svg class="icon"><use href="#i-bus"/></svg>Автобусом</button>
     <button role="tab" aria-selected="false" aria-controls="r-car"><svg class="icon"><use href="#i-car"/></svg>На машине</button>
+    <button role="tab" aria-selected="false" aria-controls="r-bus"><svg class="icon"><use href="#i-bus"/></svg>Автобусом</button>
   </div>
   <div class="rpanel is-open" id="r-train" role="tabpanel">
-    <div class="route"><div><h3>Поездом до ст. <span class="draft">название</span></h3><p class="draft">Описание: какие поезда, из каких городов, когда лучше прибывать</p><ol class="rsteps"><li class="draft">Шаг маршрута</li><li class="draft">Шаг маршрута</li><li>Напишите номер поезда и время в <a href="../cabinet/chat.html">чат</a> — вас встретят на станции</li></ol></div><div class="route__facts"><b class="draft">N ч</b>от Москвы<br><span class="draft">N ₽</span></div></div>
+    <div class="route"><div><h3>Поездом до Воронежа, дальше электричкой</h3><p class="draft">Из других городов: поезд до Воронежа-1, затем электричка до Колодезной — см. соседнюю вкладку</p><ol class="rsteps"><li class="draft">Поезд до Воронежа: какие удобные по времени</li><li class="draft">Переход на электричку: с какого вокзала, сколько времени закладывать</li><li>Электричка до станции Колодезная — встречаем там</li></ol></div><div class="route__facts"><span class="draft">время в пути</span><span class="draft">цена</span></div></div>
   </div>
   <div class="rpanel" id="r-local" role="tabpanel">
-    <div class="route"><div><h3>Электричкой из Воронежа</h3><p class="draft">Описание: направление, станция, расписание</p><ol class="rsteps"><li class="draft">Шаг маршрута</li><li class="draft">Шаг маршрута</li></ol></div><div class="route__facts"><b class="draft">N ч</b><span class="draft">N ₽</span></div></div>
-  </div>
-  <div class="rpanel" id="r-bus" role="tabpanel">
-    <div class="route"><div><h3>Автобусом из Воронежа</h3><p class="draft">Описание: автовокзал, рейсы, где выходить</p><ol class="rsteps"><li class="draft">Шаг маршрута</li><li class="draft">Шаг маршрута</li></ol></div><div class="route__facts"><b class="draft">N ч</b><span class="draft">N ₽</span></div></div>
+    <div class="route"><div><h3>Электричкой из Воронежа до Колодезной</h3><p class="draft">Направление, откуда отправляется, сколько идёт; расписание — ссылка на Яндекс.Расписания</p><ol class="rsteps"><li class="draft">Откуда отправляется в Воронеже</li><li class="draft">Сколько идёт, на что смотреть в расписании</li><li><span>Выходите на станции Колодезная, ждёте у <span class="draft">ориентира</span> — забираем на машине</span></li></ol></div><div class="route__facts"><span class="draft">время в пути</span><span class="draft">цена</span></div></div>
   </div>
   <div class="rpanel" id="r-car" role="tabpanel">
-    <div class="route"><div><h3>На машине</h3><p class="draft">Описание: трасса, съезд, где парковать, дорога в дождь</p><ol class="rsteps"><li class="draft">Шаг маршрута</li><li class="draft">Шаг маршрута</li><li>Можете взять попутчиков — отметьте это в заявке</li></ol></div><div class="route__facts"><b class="draft">N км</b>от Воронежа</div></div>
+    <div class="route"><div><h3>На машине прямо до базы</h3><p class="draft">Трасса, съезд, последние километры, где парковать, как дорога в дождь</p><ol class="rsteps"><li><span>Навигатор на точку <code>51.339044, 39.124963</code> — <a href="https://yandex.ru/maps/?rtext=~51.339044,39.124963&rtt=auto" rel="noopener" target="_blank">маршрут в Яндекс Картах</a></span></li><li class="draft">Где съезжать с трассы, ориентиры</li><li class="draft">Где оставить машину в лагере</li></ol></div><div class="route__facts"><span class="draft">от Воронежа ~ км</span><span class="draft">время</span></div></div>
+    <p class="small" style="margin-top: var(--sp-3)">Едете на машине и есть свободные места — отметьте в <a href="../apply/">форме записи</a>, подберём попутчиков с той же датой.</p>
   </div>
-  <h2 style="margin-top: var(--sp-7)">Встреча</h2>
-  <div class="callout"><svg class="icon" style="color: var(--river)"><use href="#i-handshake"/></svg><p class="draft">Описание встречи: где, как договориться, что делать если опаздываете</p></div>
-  <p style="margin-top: var(--sp-5)">Время прибытия и номер поезда напишите в <a href="../cabinet/chat.html">чате</a> после записи — так руководитель увидит, кого встречать.</p>
+  <div class="rpanel" id="r-bus" role="tabpanel">
+    <div class="route"><div><h3>Автобусом <span class="chip chip--warn">ненадёжно</span></h3><p>Автобус до Борщёва существует, но ходит примерно раз в день, а расписание меняется. Рассчитывать на него не стоит; если только он — заранее сверьте расписание и предупредите нас.</p><ol class="rsteps"><li class="draft">Автовокзал, номер рейса, время по расписанию</li><li class="draft">Где выходить, сколько идти до базы</li></ol></div><div class="route__facts"><span class="draft">время</span><span class="draft">цена</span></div></div>
+  </div>
+</div></div></section>
+
+<section class="section section--ground section--tight" id="contact"><div class="wrap"><div class="event-cols" style="align-items:start">
+  <div>
+    <h2>Связь</h2>
+    <p class="small draft" style="margin-bottom: var(--sp-4)">Чего ждать от связи в лагере и когда начальник экспедиции не отвечает</p>
+    <ul class="meta meta--lined">
+      <li><svg class="icon"><use href="#i-wifi"/></svg><div><b>Какие операторы ловят</b><span class="draft">и где в лагере есть сигнал</span></div></li>
+      <li><svg class="icon"><use href="#i-clock"/></svg><div><b>Когда мы на связи</b><span class="draft">на раскопе телефон не слышно; вечером отвечаем</span></div></li>
+      <li><svg class="icon"><use href="#i-phone"/></svg><div><b>Телефон встречающего</b><span>Придёт в напоминании за несколько дней до приезда</span></div></li>
+      <li><svg class="icon"><use href="#i-vk"/></svg><div><b>Если срочно</b><span class="draft">куда писать, если не дозвонились</span></div></li>
+    </ul>
+  </div>
+  <div>
+    <h2>Как договориться о встрече</h2>
+    <p class="small draft" style="margin-bottom: var(--sp-4)">Пошагово, чтобы не переписываться: всё уходит через форму и напоминание</p>
+    <ol class="steps-list">
+      <li><div><b>В форме записи укажите, чем едете</b><p>Поезд или электричку и время прибытия. Не знаете — допишете позже по ссылке из сообщения.</p></div></li>
+      <li><div><b>За несколько дней придёт напоминание</b><p>С телефоном встречающего и точкой на станции Колодезная.</p></div></li>
+      <li><div><b>Вышли из электрички — позвоните</b><p class="draft">Где ждать на станции: ориентир, сторона платформы</p></div></li>
+      <li><div><b>Опаздываете или поменялись планы</b><p>Измените запись по той же ссылке — начальник экспедиции увидит сразу.</p></div></li>
+    </ol>
+  </div>
+</div></div></section>
+
+<section class="section section--tight" id="arrival"><div class="wrap"><div class="narrow">
+  <h2>По прибытии</h2>
+  <div class="callout"><svg class="icon" style="color: var(--river)"><use href="#i-handshake"/></svg><p class="draft">Куда идти в лагере, к кому подойти, что сделать первым делом: поставить палатку, записаться у начальника, узнать распорядок</p></div>
+  <div class="actions" style="margin-top: var(--sp-5)"><a class="btn btn--primary" href="../apply/">Записаться</a><a class="link-more" href="../volunteers/#pack">Что взять с собой</a></div>
 </div></div></section>
 </main>
-<script src="../assets/js/chrome.js?v=11"></script>
+<script src="../assets/js/chrome.js?v=20"></script>
 <script>
 // Route tabs: one transport at a time; remembered per browser.
 (function () {

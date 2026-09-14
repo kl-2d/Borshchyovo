@@ -9,58 +9,132 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#005c99">
-<link rel="stylesheet" href="../assets/css/fonts.css?v=11">
-<link rel="stylesheet" href="../assets/css/tokens.css?v=11">
-<link rel="stylesheet" href="../assets/css/site.css?v=11">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=20">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=20">
+<link rel="stylesheet" href="../assets/css/site.css?v=20">
 </head>
 <body data-root="../" data-page="about">
 <main>
-<div class="page-head"><div class="wrap"><div class="crumbs"><a href="../">Главная</a> / Об экспедиции</div><h1>Об экспедиции</h1><p class="lede draft">Одна строка: кто, где и с какого года</p></div></div>
-<section class="section section--tight"><div class="wrap">
-  <div class="split split--text-first">
-    <div class="prose">
-      <h2>История</h2>
-      <p class="draft">Абзац: как и когда началась экспедиция</p>
-      <ol class="tl">
-        <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Начало работ</b><p class="draft">Одна строка о событии</p></div></li>
-        <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Ключевая находка</b><p class="draft">Одна строка о событии</p></div></li>
-        <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Новая стоянка</b><p class="draft">Одна строка о событии</p></div></li>
-        <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Первые волонтёры</b><p class="draft">Одна строка о событии</p></div></li>
-        <li><time>сейчас</time><span class="dot"></span><div><b>Борщёво-5 и другие стоянки</b><p>Сезон каждое лето, набор волонтёров через этот сайт</p></div></li>
-      </ol>
-    </div>
-    <div class="photo"><span class="photo__cap">Архивное фото</span></div>
+<div class="page-head"><div class="wrap"><div class="crumbs"><a href="../">Главная</a> / Об экспедиции</div><h1>Об экспедиции</h1><p class="lede draft">Одна строка: кто ведёт раскопки, где и с какого года</p></div></div>
+
+<div class="wrap article">
+  <nav class="toc" aria-label="На этой странице">
+    <ul>
+      <li><a href="#history">История</a></li>
+      <li><a href="#sites">Стоянки</a></li>
+      <li><a href="#leader">Начальник экспедиции</a></li>
+      <li><a href="#photos">Фото и видео</a></li>
+      <li><a href="#press">Пресса и партнёры</a></li>
+    </ul>
+  </nav>
+
+  <div class="article__body">
+    <section id="history" style="padding-top: 0">
+      <h2><svg class="icon"><use href="#i-book"/></svg>История</h2>
+      <p class="small draft" style="margin-bottom: var(--sp-4)">Небольшая история: как начались раскопки в районе, ключевые сезоны и находки, чем важны стоянки для науки</p>
+      <div class="split split--text-first" style="align-items:start">
+        <div class="prose">
+          <p class="draft">Абзац: как и когда началась экспедиция</p>
+          <p class="draft">Абзац: что дают эти раскопки науке, с кем сотрудничаем</p>
+          <ol class="tl">
+            <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Начало работ</b><p class="draft">Одна строка о событии</p></div></li>
+            <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Ключевая находка</b><p class="draft">Одна строка о событии</p></div></li>
+            <li><time class="draft">ГГГГ</time><span class="dot"></span><div><b class="draft">Первые волонтёры</b><p class="draft">Одна строка о событии</p></div></li>
+            <li><time>сейчас</time><span class="dot"></span><div><b>Борщёво-5 и другие стоянки</b><p>Сезон каждое лето, набор волонтёров через этот сайт</p></div></li>
+          </ol>
+        </div>
+        <div class="photo photo--tall"><span class="photo__cap">Архивное фото</span></div>
+      </div>
+    </section>
+
+    <section id="sites">
+      <h2><svg class="icon"><use href="#i-map"/></svg>Стоянки</h2>
+      <p class="small draft" style="margin-bottom: var(--sp-4)">Главная стоянка сейчас — Борщёво-5; остальные — карточками. Метки на карте ставим по списку начальника экспедиции</p>
+      <div class="site-main">
+        <div class="photo"><span class="photo__cap">Фото: раскоп Борщёво-5</span></div>
+        <div>
+          <div class="kicker row"><span>Основная стоянка</span><span class="chip chip--ok">в работе</span></div>
+          <h3>Борщёво-5</h3>
+          <p class="prose draft">Абзац: эпоха, что копаем, что уже найдено, чем стоянка особенна</p>
+          <ul class="meta meta--lined">
+            <li><svg class="icon"><use href="#i-clock"/></svg><div><b class="draft">Эпоха, датировка</b><span class="draft">верхний палеолит, тысяч лет назад</span></div></li>
+            <li><svg class="icon"><use href="#i-bone"/></svg><div><b class="draft">Что находим</b><span class="draft">кремень, кости мамонта, следы жилищ</span></div></li>
+            <li><svg class="icon"><use href="#i-calendar"/></svg><div><b class="draft">Копаем с ГГГГ</b><span class="draft">сколько сезонов, что в планах</span></div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cols-3" style="margin-top: var(--sp-5)">
+        <div class="card"><div class="photo"><span class="photo__cap">Фото</span></div><h3 class="draft">Костёнки-21</h3><div class="card__meta draft">эпоха · что копали · статус</div></div>
+        <div class="card"><div class="photo"><span class="photo__cap">Фото</span></div><h3 class="draft">Стоянка</h3><div class="card__meta draft">эпоха · что копали · статус</div></div>
+        <div class="card"><div class="photo"><span class="photo__cap">Фото</span></div><h3 class="draft">Стоянка</h3><div class="card__meta draft">эпоха · что копали · статус</div></div>
+      </div>
+      <div class="gmap" style="margin-top: var(--sp-5); aspect-ratio: 21 / 8">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=39.10%2C51.36&z=12&pt=39.124963%2C51.339044%2Cpm2rdm" width="100%" height="100%" frameborder="0" allowfullscreen loading="lazy" title="Карта Костёнковско-Борщёвского района"></iframe>
+      </div>
+      <p class="small draft" style="margin-top: var(--sp-2)">Карта района: метка базы стоит, метки стоянок добавим по координатам от начальника экспедиции</p>
+    </section>
+
+    <section id="leader">
+      <h2><svg class="icon"><use href="#i-users"/></svg>Начальник экспедиции</h2>
+      <div class="leader">
+        <div class="photo photo--tall"><span class="photo__cap">Портрет</span></div>
+        <div>
+          <h3>Лисицын Сергей Николаевич</h3>
+          <p class="small draft" style="margin-bottom: var(--sp-4)">Должность, институт, учёная степень — одной строкой</p>
+          <div class="prose">
+            <p class="draft">Абзац: чем занимается, сколько лет ведёт экспедицию</p>
+            <p class="draft">Абзац: два-три слова от себя волонтёрам</p>
+          </div>
+          <h4 style="margin: var(--sp-5) 0 var(--sp-2)">Публикации</h4>
+          <ul class="pubs">
+            <li class="draft">Публикация</li>
+            <li class="draft">Публикация</li>
+            <li class="draft">Публикация</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="photos">
+      <h2><svg class="icon"><use href="#i-camera"/></svg>Фото и видео</h2>
+      <p class="small draft" style="margin-bottom: var(--sp-4)">Альбомы по темам: раскоп, находки, лагерь, люди; один-два репортажа или лекции из ВК Видео</p>
+      <div class="masonry">
+        <div class="photo span-2"><span class="photo__cap">Раскоп</span></div>
+        <div class="photo"><span class="photo__cap">Находки</span></div>
+        <div class="photo"><span class="photo__cap">Лагерь</span></div>
+        <div class="photo"><span class="photo__cap">Люди</span></div>
+        <div class="photo"><span class="photo__cap">Находки</span></div>
+        <div class="photo"><span class="photo__cap">Лагерь</span></div>
+        <div class="photo"><span class="photo__cap">Люди</span></div>
+      </div>
+      <div class="video-grid" style="margin-top: var(--sp-5)">
+        <div class="video video--wide"><div class="photo photo--wide"><span class="photo__cap">Постер</span></div><button type="button" class="video__play" aria-label="Смотреть"><svg class="icon"><use href="#i-arrow"/></svg></button><div class="video__cap"><b class="draft">Репортаж или лекция</b><span class="small draft">когда · длительность</span></div></div>
+        <div class="video video--wide"><div class="photo photo--wide"><span class="photo__cap">Постер</span></div><button type="button" class="video__play" aria-label="Смотреть"><svg class="icon"><use href="#i-arrow"/></svg></button><div class="video__cap"><b class="draft">Репортаж или лекция</b><span class="small draft">когда · длительность</span></div></div>
+      </div>
+    </section>
+
+    <section id="press">
+      <h2><svg class="icon"><use href="#i-handshake"/></svg>Пресса и партнёры</h2>
+      <div class="split" style="align-items:start">
+        <div>
+          <h3>Для прессы и коллег</h3>
+          <p class="prose draft">Как получить комментарий, фото, доступ на раскоп; кому писать</p>
+          <a class="link-more" href="../apply/#contacts">Контакты</a>
+        </div>
+        <div>
+          <h3>Партнёры</h3>
+          <div class="logos logos--2">
+            <div>Логотип института</div>
+            <div>Логотип музея</div>
+            <div>Логотип партнёра</div>
+            <div>Логотип партнёра</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-</div></section>
-<section class="section section--ground section--tight"><div class="wrap">
-  <div class="split" style="align-items:start">
-    <div class="prose"><h2>Научное значение</h2><p class="draft">Абзац: что дают эти раскопки науке</p><p class="draft">Абзац: с кем сотрудничаем, где публикуемся</p></div>
-    <div><h2>Публикации</h2><ul class="pubs"><li class="draft">Публикация</li><li class="draft">Публикация</li><li class="draft">Публикация</li><li class="draft">Публикация</li></ul><p style="margin-top: var(--sp-3)"><a class="link-more" href="../lisitsyn/">Полный список у руководителя</a></p></div>
-  </div>
-</div></section>
-<section class="section section--tight"><div class="wrap">
-  <h2>Команда</h2>
-  <div class="cols-4">
-    <div class="card"><div class="photo photo--square"><span class="photo__cap">Фото</span></div><h3>Лисицын С. Н.</h3><div class="card__meta">руководитель</div></div>
-    <div class="card"><div class="photo photo--square"><span class="photo__cap">Фото</span></div><h3 class="draft">Имя</h3><div class="card__meta draft">роль</div></div>
-    <div class="card"><div class="photo photo--square"><span class="photo__cap">Фото</span></div><h3 class="draft">Имя</h3><div class="card__meta draft">роль</div></div>
-    <div class="card"><div class="photo photo--square"><span class="photo__cap">Фото</span></div><h3 class="draft">Имя</h3><div class="card__meta draft">роль</div></div>
-  </div>
-</div></section>
-<section class="section section--tight"><div class="wrap split" style="align-items:start">
-  <div><h2>Для прессы и коллег</h2><p class="prose draft">Абзац: как получить комментарий, фото, доступ на раскоп; кому писать</p><a class="link-more" href="../contacts/">Контакты</a></div>
-  <div><h2>Документы</h2><ul class="regalia"><li><svg class="icon"><use href="#i-shield"/></svg><span class="draft">Открытый лист / разрешение на раскопки — номер и год</span></li><li><svg class="icon"><use href="#i-book"/></svg><span class="draft">Отчёты по сезонам</span></li><li><svg class="icon"><use href="#i-flag"/></svg><span class="draft">Организация, ведущая экспедицию</span></li></ul></div>
-</div></section>
-<section class="section section--ground section--tight"><div class="wrap">
-  <h2>Партнёры</h2>
-  <div class="logos">
-    <div>Логотип института</div>
-    <div>Логотип музея</div>
-    <div>Логотип партнёра</div>
-    <div>Логотип партнёра</div>
-  </div>
-</div></section>
+</div>
 </main>
-<script src="../assets/js/chrome.js?v=11"></script>
+<script src="../assets/js/chrome.js?v=20"></script>
 </body>
 </html>

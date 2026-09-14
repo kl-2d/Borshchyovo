@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Досуг — Костёнки-Борщёво</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#005c99">
+<link rel="stylesheet" href="../assets/css/fonts.css?v=20">
+<link rel="stylesheet" href="../assets/css/tokens.css?v=20">
+<link rel="stylesheet" href="../assets/css/site.css?v=20">
+</head>
+<body data-root="../" data-page="leisure">
+<main>
+<div class="page-head"><div class="wrap"><div class="crumbs"><a href="../">Главная</a> / Досуг</div><h1>Досуг</h1><p class="lede draft">Два абзаца о жизни лагеря вне раскопа: вечера, праздники, лекции — чтобы снять сомнение «а не скучно ли там»</p></div></div>
+
+<section class="section section--tight" id="events"><div class="wrap">
+  <h2>События сезона</h2>
+  <p class="small draft" style="margin-bottom: var(--sp-5)">Что запланировано на сезон: праздники, лекции, экскурсии, гости. Нажмите на событие — откроется описание. Список ведёт начальник экспедиции в своём календаре, сайт подхватывает его сам</p>
+  <ul class="events events--grid" id="events-list"></ul>
+  <h3 style="margin: var(--sp-7) 0 var(--sp-3)">На календаре</h3>
+  <p class="small" style="margin-bottom: var(--sp-4)">Праздники отмечены красным, вне сезона — серым. Нажмите на день с событием, чтобы прочитать о нём</p>
+  <div class="cal cal--events" id="cal" aria-label="Календарь событий сезона"></div>
+</div></section>
+
+<section class="section section--ground section--tight" id="video"><div class="wrap">
+  <h2>Видео с событий</h2>
+  <p class="small draft" style="margin-bottom: var(--sp-5)">Ролики с праздников и вечеров из ВК Видео; постер грузится сразу, плеер — по клику</p>
+  <div class="video-grid">
+    <div class="video video--wide"><div class="photo photo--wide"><span class="photo__cap">Постер</span></div><button type="button" class="video__play" aria-label="Смотреть"><svg class="icon"><use href="#i-arrow"/></svg></button><div class="video__cap"><b class="draft">Название ролика</b><span class="small draft">когда снято · 1:20</span></div></div>
+    <div class="video video--wide"><div class="photo photo--wide"><span class="photo__cap">Постер</span></div><button type="button" class="video__play" aria-label="Смотреть"><svg class="icon"><use href="#i-arrow"/></svg></button><div class="video__cap"><b class="draft">Название ролика</b><span class="small draft">когда снято · 0:45</span></div></div>
+    <div class="video video--wide"><div class="photo photo--wide"><span class="photo__cap">Постер</span></div><button type="button" class="video__play" aria-label="Смотреть"><svg class="icon"><use href="#i-arrow"/></svg></button><div class="video__cap"><b class="draft">Название ролика</b><span class="small draft">когда снято · 2:10</span></div></div>
+    <div class="video video--wide"><div class="photo photo--wide"><span class="photo__cap">Постер</span></div><button type="button" class="video__play" aria-label="Смотреть"><svg class="icon"><use href="#i-arrow"/></svg></button><div class="video__cap"><b class="draft">Название ролика</b><span class="small draft">когда снято · 0:30</span></div></div>
+  </div>
+</div></section>
+
+<section class="section section--tight" id="around"><div class="wrap">
+  <h2>Вокруг лагеря</h2>
+  <p class="small draft" style="margin-bottom: var(--sp-5)">Куда сходить в выходной: Дон, музей-заповедник, окрестности — три-четыре карточки</p>
+  <div class="reasons">
+    <div class="reason"><div class="photo"><span class="photo__cap">Фото</span></div><h3>Дон</h3><p class="draft">Купание, берег, что рядом</p></div>
+    <div class="reason"><div class="photo"><span class="photo__cap">Фото</span></div><h3>Музей-заповедник Костёнки</h3><p class="draft">Что там, как доехать из лагеря</p></div>
+    <div class="reason"><div class="photo"><span class="photo__cap">Фото</span></div><h3 class="draft">Окрестности</h3><p class="draft">Село, меловые холмы, маршруты</p></div>
+  </div>
+</div></section>
+
+<section class="section section--ground section--tight" id="photos"><div class="wrap">
+  <h2>Фото</h2>
+  <p class="small draft" style="margin-bottom: var(--sp-5)">Лента из 8–12 кадров с праздников и вечеров, открываются в просмотре</p>
+  <div class="masonry">
+    <div class="photo span-2"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+    <div class="photo"><span class="photo__cap">Фото</span></div>
+  </div>
+</div></section>
+
+<section class="section section--tight"><div class="wrap"><div class="narrow">
+  <div class="actions"><a class="btn btn--primary btn--lg" href="../apply/">Записаться</a><a class="link-more" href="../volunteers/">Что нужно знать до записи</a></div>
+</div></div></section>
+</main>
+<script src="../assets/js/chrome.js?v=20"></script>
+<script src="../assets/js/season.js?v=20"></script>
+<script>Season.render({ calendar: 'cal', events: 'events-list' });</script>
+</body>
+</html>
